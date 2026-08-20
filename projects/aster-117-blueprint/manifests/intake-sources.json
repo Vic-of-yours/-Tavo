@@ -1,0 +1,71 @@
+{
+  "schema": "aster.intake-sources/v1",
+  "auditedAt": "2026-08-20",
+  "policy": "Every intake is immutable evidence. Only selected, unique current files enter the live workspace; obsolete versions remain Git history only.",
+  "sources": [
+    {
+      "id": "projects-handoff",
+      "name": "Projects.zip",
+      "bytes": 111563600,
+      "sha256": "213680352f1d9db96f42bce2425d3ffc74ddd9b7d36031f537015c9b2d90f8c9",
+      "role": "handoff aggregate and Aster 0.9 implementation evidence",
+      "provenance": "user-uploaded",
+      "upstreamRepository": null,
+      "license": "unknown",
+      "latestWorkspaceAction": "do-not-embed; preserve hash and expanded-history commit because the archive exceeds GitHub's normal 100 MiB blob limit"
+    },
+    {
+      "id": "v117-canonical",
+      "name": "vi-project-dev-v2-v117.zip",
+      "bytes": 2091251,
+      "sha256": "7cf04ac30f641a70656eff9ecd43e854e45b87ac35de742681e06f7f5064e631",
+      "role": "immutable v117 behavior and migration evidence",
+      "provenance": "user-uploaded; no repository URL or commit embedded",
+      "upstreamRepository": null,
+      "license": "unknown",
+      "latestWorkspaceAction": "do-not-embed; translate responsibilities into the 172-row ledger"
+    },
+    {
+      "id": "phone-reference",
+      "name": "绮楼在改小手机-1.4.1.tpg",
+      "bytes": 243990,
+      "sha256": "863ca2ef1b8efa7bd63b13367fad1ae6c3ef7eb242dcc50468511d543a45d198",
+      "role": "read-only mobile interaction evidence",
+      "provenance": "package self-identifies 绮楼 and prior author ray; public Git source not verified",
+      "upstreamRepository": null,
+      "license": "unknown",
+      "latestWorkspaceAction": "do-not-copy code or cover; retain only audited interaction responsibilities"
+    },
+    {
+      "id": "ranch-lorebook-reference",
+      "name": "Tavo_兽人牧场_1kYBH.json",
+      "bytes": 461410,
+      "sha256": "d9d73276886d70c19deebd4f3c487876c055d32a418e830acde5218b7ef66a99",
+      "role": "read-only schema and staged-settlement evidence",
+      "provenance": "no author, repository, commit or license fields",
+      "upstreamRepository": null,
+      "license": "unknown",
+      "latestWorkspaceAction": "do-not-copy prose; retain only schema/pipeline responsibilities"
+    },
+    {
+      "id": "vnext-r189-continuity",
+      "name": "Vic-vNext-Complete-r189-manifest.json",
+      "bytes": 24370,
+      "sha256": "b309db88f685ce03644af371caca19098926371b85e4300b5195d98b2b368010",
+      "role": "verified continuity baseline for the five-book engine, narrative source and fixed protocol",
+      "provenance": "bundled Vic vNext maintainer checkpoint",
+      "upstreamRepository": null,
+      "license": "project-internal evidence",
+      "latestWorkspaceAction": "map responsibilities into Aster; do not copy the Vic namespace or compatibility layer"
+    }
+  ],
+  "platformAuthority": [
+    "https://docs.tavoai.dev/cn/guides/javascript-api/",
+    "https://docs.tavoai.dev/cn/guides/plugin-development/",
+    "https://docs.tavoai.dev/cn/guides/ejs-template/",
+    "https://docs.tavoai.dev/cn/guides/lore-book/",
+    "https://docs.tavoai.dev/cn/guides/regular/",
+    "https://docs.tavoai.dev/cn/guides/advanced-rendering/"
+  ]
+}
+

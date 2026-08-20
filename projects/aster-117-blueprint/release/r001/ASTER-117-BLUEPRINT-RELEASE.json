@@ -1,0 +1,35 @@
+{
+  "assets": {
+    "bytes": 4279320,
+    "file": "Aster-117-Blueprint-Assets-r001.zip",
+    "json": 1,
+    "members": 98,
+    "metadata": 2,
+    "raster": 16,
+    "sha256": "80c51d1f1da289987574fdd2717a9154eab052b18c70b40188fc3b797e70b788",
+    "svg": 78
+  },
+  "code": {
+    "bytes": 342003,
+    "domains": {
+      "codex": 1,
+      "core": 19,
+      "func": 5,
+      "skin": 6,
+      "system": 5
+    },
+    "file": "Aster-117-Blueprint-Code-r001.zip",
+    "members": 72,
+    "modules": 36,
+    "sha256": "7a1f054a2f7e0bd1106863f717cc362d0ef1d5b026b69f53758f4e90419289f2"
+  },
+  "crossPackageDuplicateMembers": 0,
+  "schema": "aster.blueprint-release/v1",
+  "version": "r001",
+  "workspace": {
+    "bytes": 5670870,
+    "duplicateContentGroups": 0,
+    "files": 168,
+    "portraitRasterFiles": 0
+  }
+}
