@@ -1,0 +1,101 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="2400" height="2080" viewBox="0 0 1200 1040" role="img" aria-labelledby="title desc">
+  <title id="title">Aster 通用 UI 素材生产蓝图</title>
+  <desc id="desc">图标、异形控件、抽象壁纸、无缝纹理与透明动画的分组、尺寸和接入边界。</desc>
+  <defs>
+    <linearGradient id="page" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#010509"/><stop offset="1" stop-color="#071722"/></linearGradient>
+    <linearGradient id="cyanbg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#06121b"/><stop offset="1" stop-color="#0d3040"/></linearGradient>
+    <linearGradient id="violetbg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#07101a"/><stop offset="1" stop-color="#30204a"/></linearGradient>
+    <linearGradient id="greenbg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#04100d"/><stop offset="1" stop-color="#0d382d"/></linearGradient>
+    <pattern id="grid" width="18" height="18" patternUnits="userSpaceOnUse"><path d="M18 0H0V18" fill="none" stroke="#62e7ff" stroke-opacity=".07"/></pattern>
+    <style>
+      text{font-family:Inter,'Noto Sans SC',sans-serif;fill:#dff9ff}.h1{font-size:25px;font-weight:700}.h2{font-size:17px;font-weight:700}.t{font-size:12px;font-weight:650}.s{font-size:10px;fill:#a0bdc8}.xs{font-size:8px;fill:#7898a5}.panel{fill:#041018;stroke:#62e7ff;stroke-opacity:.32}.p0{fill:#06202b;stroke:#62e7ff;stroke-width:1.2}.p1{fill:#261c3d;stroke:#b78cff;stroke-width:1.2}.wire{fill:none;stroke:currentColor;stroke-width:1.6;stroke-linecap:round;stroke-linejoin:round}.dim{stroke:#7898a5;stroke-dasharray:4 4}.tag0{fill:#62e7ff}.tag1{fill:#b78cff}.tagText{font-size:8px;font-weight:800;fill:#02080d}.number{font-size:12px;font-weight:800;fill:#02080d}.num0{fill:#62e7ff}.num1{fill:#b78cff}
+    </style>
+  </defs>
+  <rect width="1200" height="1040" fill="url(#page)"/><rect width="1200" height="1040" fill="url(#grid)"/>
+  <text class="h1" x="34" y="43">ASTER / COMMON UI ASSET BLUEPRINT</text>
+  <text class="s" x="34" y="64">只含跨世界通用视觉件 · 不含角色 / 地点 / 地图内容 / 玩法场景 / 直播封面</text>
+  <rect class="tag0" x="950" y="27" width="42" height="20" rx="3"/><text class="tagText" x="961" y="41">P0</text><text class="xs" x="999" y="41">最小完整</text>
+  <rect class="tag1" x="1070" y="27" width="42" height="20" rx="3"/><text class="tagText" x="1081" y="41">P1</text><text class="xs" x="1119" y="41">推荐增强</text>
+
+  <!-- icon system -->
+  <rect class="panel" x="28" y="86" width="550" height="430" rx="8"/>
+  <text class="h2" x="48" y="118">UI01 · 统一语义图标系统</text><text class="s" x="48" y="137">24×24 viewBox · 1.5px stroke · currentColor · 2px 安全边</text>
+  <g transform="translate(49 157)" color="#62e7ff">
+    <g transform="translate(0 0)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M47 18 31 31l16 13M32 31h23"/><text class="xs" x="9" y="55">back</text></g>
+    <g transform="translate(86 0)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="m25 20 24 24M49 20 25 44"/><text class="xs" x="9" y="55">close</text></g>
+    <g transform="translate(172 0)"><rect class="p0" width="74" height="62" rx="5"/><circle class="wire" cx="34" cy="29" r="12"/><path class="wire" d="m43 38 10 10"/><text class="xs" x="9" y="55">search</text></g>
+    <g transform="translate(258 0)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M19 19h36L42 32v13l-10 5V32z"/><text class="xs" x="9" y="55">filter</text></g>
+    <g transform="translate(344 0)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M24 20h30M29 31h20M34 42h10"/><text class="xs" x="9" y="55">sort</text></g>
+    <g transform="translate(430 0)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M37 18v27M24 31h27"/><text class="xs" x="9" y="55">add</text></g>
+
+    <g transform="translate(0 76)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M22 42V25l15-10 15 10v17H22Zm8 0V31h14v11"/><text class="xs" x="9" y="55">home</text></g>
+    <g transform="translate(86 76)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="m18 23 15-7 12 6 12-6v27l-12 6-12-6-15 7zM33 16v27M45 22v27"/><text class="xs" x="9" y="55">map</text></g>
+    <g transform="translate(172 76)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M37 15c-10 0-17 7-17 16 0 13 17 23 17 23s17-10 17-23c0-9-7-16-17-16Z"/><circle class="wire" cx="37" cy="31" r="5"/><text class="xs" x="9" y="55">location</text></g>
+    <g transform="translate(258 76)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M21 25h32l-4 25H25zM29 25c0-8 16-8 16 0"/><text class="xs" x="9" y="55">bag</text></g>
+    <g transform="translate(344 76)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="m37 14 6 12 13 2-10 10 3 13-12-6-12 6 3-13-10-10 13-2z"/><text class="xs" x="9" y="55">quest</text></g>
+    <g transform="translate(430 76)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M20 20h34v25H31l-11 8zM27 28h20M27 36h14"/><text class="xs" x="9" y="55">message</text></g>
+
+    <g transform="translate(0 152)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M21 17h32v35H21zM27 25h20M27 33h20M27 41h12"/><text class="xs" x="9" y="55">forum</text></g>
+    <g transform="translate(86 152)"><rect class="p0" width="74" height="62" rx="5"/><circle class="wire" cx="37" cy="34" r="8"/><path class="wire" d="M22 20c-8 8-8 20 0 28M52 20c8 8 8 20 0 28M16 14c-12 12-12 28 0 40M58 14c12 12 12 28 0 40"/><text class="xs" x="9" y="55">live</text></g>
+    <g transform="translate(172 152)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M20 17h34v34H20zM28 25h18M28 33h18M28 41h9"/><text class="xs" x="9" y="55">data</text></g>
+    <g transform="translate(258 152)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M22 20h30v28H22zM28 27h18v14H28z"/><text class="xs" x="9" y="55">resource</text></g>
+    <g transform="translate(344 152)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M37 15a19 19 0 1 0 0 38V15Z"/><circle class="wire" cx="37" cy="34" r="19"/><text class="xs" x="9" y="55">theme</text></g>
+    <g transform="translate(430 152)"><rect class="p0" width="74" height="62" rx="5"/><circle class="wire" cx="37" cy="34" r="8"/><path class="wire" d="m37 14 4 4 6-1 3 6 6 3-2 6 3 6-5 4-1 7-7 1-5 5-5-5-7-1-1-7-5-4 3-6-2-6 6-3 3-6 6 1z"/><text class="xs" x="9" y="55">settings</text></g>
+
+    <g transform="translate(0 228)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M22 18h30v34H22zM29 26h16M29 34h10M29 42h16"/><text class="xs" x="9" y="55">lorebook</text></g>
+    <g transform="translate(86 228)"><rect class="p0" width="74" height="62" rx="5"/><circle class="wire" cx="37" cy="28" r="10"/><path class="wire" d="M20 53c2-12 32-12 34 0"/><text class="xs" x="9" y="55">character</text></g>
+    <g transform="translate(172 228)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M20 18h34v32H20zM25 43l9-10 6 6 5-6 5 6M46 25h.1"/><text class="xs" x="9" y="55">image</text></g>
+    <g transform="translate(258 228)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M28 46V22l22-5v24M28 46c0 8-14 8-14 0s14-8 14 0ZM50 41c0 8-14 8-14 0s14-8 14 0Z"/><text class="xs" x="9" y="55">audio</text></g>
+    <g transform="translate(344 228)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M20 18h34v32H20zM31 18v32M43 18v32M20 28h11M43 28h11M20 40h11M43 40h11"/><text class="xs" x="9" y="55">video</text></g>
+    <g transform="translate(430 228)"><rect class="p0" width="74" height="62" rx="5"/><path class="wire" d="M23 49 36 17h3l13 32M28 38h19"/><text class="xs" x="9" y="55">font</text></g>
+  </g>
+  <text class="xs" x="48" y="493">上图是线宽与视觉语言示意；任务单共 60 个 icon ID，必须交 master symbol sprite + 独立 SVG。</text>
+  <circle class="num0" cx="560" cy="104" r="12"/><text class="number" x="556" y="108">1</text>
+
+  <!-- masks -->
+  <rect class="panel" x="598" y="86" width="574" height="246" rx="8"/>
+  <text class="h2" x="618" y="118">UI02 · 异形控件遮罩</text><text class="s" x="618" y="137">只交路径 / mask，不画文字、颜色、阴影或交互状态</text>
+  <g transform="translate(620 160)" fill="#0b2a36" stroke="#62e7ff" stroke-width="1.2">
+    <path d="M8 0h132v38l-8 8H0V8z"/><path transform="translate(165)" d="M12 0h120l12 12v22l-12 12H0V12z"/>
+    <path transform="translate(330)" d="M0 0h54l8 8h82v30l-8 8H0z"/>
+    <path transform="translate(0 70)" d="m23 0 23 13v26L23 52 0 39V13z"/>
+    <path transform="translate(82 70)" d="M10 0h134l-10 38H0z"/>
+    <path transform="translate(255 70)" d="M0 7h18V0h108v7h18v38h-18v7H18v-7H0z"/>
+  </g>
+  <text class="xs" x="620" y="310">chamfer-6 / chamfer-10 / double-notch / hex-node / tab-slant / bracket-button</text>
+  <circle class="num0" cx="1153" cy="104" r="12"/><text class="number" x="1149" y="108">2</text>
+
+  <!-- wallpapers -->
+  <rect class="panel" x="598" y="350" width="574" height="350" rx="8"/>
+  <text class="h2" x="618" y="382">BG01–BG03 · 三张抽象竖屏壁纸</text><text class="s" x="618" y="401">1440×3200 · 中央 72% 低对比 · 无任何世界内容</text>
+  <g transform="translate(620 422)">
+    <rect width="158" height="230" rx="10" fill="url(#cyanbg)" stroke="#62e7ff" stroke-opacity=".5"/><path d="M10 58h138M10 120h138M40 10v210M105 10v210" stroke="#62e7ff" stroke-opacity=".1"/><ellipse cx="117" cy="52" rx="50" ry="70" fill="#62e7ff" opacity=".06"/><text class="t" x="15" y="204">BG01 CYAN</text><text class="xs" x="15" y="219">terminal-city 值</text>
+    <g transform="translate(184)"><rect width="158" height="230" rx="10" fill="url(#violetbg)" stroke="#b78cff" stroke-opacity=".5"/><path d="m20 180 44-150 38 110 32-90" fill="none" stroke="#b78cff" stroke-opacity=".18"/><text class="t" x="15" y="204">BG02 VIOLET</text><text class="xs" x="15" y="219">violet-crystal 值</text></g>
+    <g transform="translate(368)"><rect width="158" height="230" rx="10" fill="url(#greenbg)" stroke="#8af0c6" stroke-opacity=".5"/><path d="M15 55c52 20 40 90 125 116M8 114c65-22 78 48 142 17" fill="none" stroke="#8af0c6" stroke-opacity=".16"/><text class="t" x="15" y="204">BG03 GREEN</text><text class="xs" x="15" y="219">green-atrium 值</text></g>
+  </g>
+  <circle class="num0" cx="1153" cy="368" r="12"/><text class="number" x="1149" y="372">3</text>
+
+  <!-- textures -->
+  <rect class="panel" x="28" y="536" width="550" height="222" rx="8"/>
+  <text class="h2" x="48" y="568">TX01 · 无缝表面纹理</text><text class="s" x="48" y="587">只输出 alpha 信息，主题色与透明度由 Skin 决定</text>
+  <g transform="translate(49 610)">
+    <rect class="p0" width="105" height="105"/><circle cx="13" cy="18" r="1" fill="#dff9ff" opacity=".4"/><circle cx="67" cy="39" r=".8" fill="#dff9ff" opacity=".35"/><circle cx="34" cy="85" r=".7" fill="#dff9ff" opacity=".3"/><text class="xs" x="12" y="96">noise 256</text>
+    <g transform="translate(125)"><rect class="p0" width="105" height="105"/><path d="M0 26h105M0 52h105M0 78h105M26 0v105M52 0v105M78 0v105" stroke="#62e7ff" stroke-opacity=".2"/><text class="xs" x="12" y="96">microgrid 256</text></g>
+    <g transform="translate(250)"><rect class="p0" width="105" height="105"/><path d="M5 25h28v24h31V17h36M14 77h46v20M60 77h31V52h9" fill="none" stroke="#62e7ff" stroke-opacity=".24"/><text class="xs" x="12" y="96">circuit 512</text></g>
+    <g transform="translate(375)"><rect class="p0" width="105" height="105"/><path d="M0 9h105M0 18h105M0 27h105M0 36h105M0 45h105M0 54h105M0 63h105M0 72h105M0 81h105" stroke="#62e7ff" stroke-opacity=".12"/><text class="xs" x="12" y="96">scanline 64</text></g>
+  </g>
+  <circle class="num0" cx="559" cy="554" r="12"/><text class="number" x="555" y="558">4</text>
+
+  <!-- motion -->
+  <rect class="panel" x="28" y="778" width="1144" height="226" rx="8"/>
+  <text class="h2" x="48" y="810">UI03 / AN01–AN03 · 推荐增强：装饰与透明动画</text><text class="s" x="48" y="829">动画不是信息载体；必须透明、可循环、可停用，并同时提供静态 fallback</text>
+  <g transform="translate(50 853)">
+    <rect class="p1" width="226" height="118" rx="6"/><text class="t" x="14" y="24">UI03 装饰 symbol atlas</text><path d="M17 50h28V38M17 50v28M69 58h124l12 12-12 12H69M84 98h110" fill="none" stroke="#b78cff" stroke-width="1.4"/><text class="xs" x="14" y="108">角件 / 分隔线 / 节点 / 准星</text>
+    <g transform="translate(246)"><rect class="p1" width="262" height="118" rx="6"/><text class="t" x="14" y="24">AN01 脉冲环 · 8×1 帧图</text><g transform="translate(14 39)" fill="none" stroke="#b78cff"><circle cx="22" cy="22" r="7" opacity=".95"/><circle cx="53" cy="22" r="11" opacity=".8"/><circle cx="88" cy="22" r="15" opacity=".65"/><circle cx="127" cy="22" r="19" opacity=".48"/><circle cx="170" cy="22" r="21" opacity=".28"/><circle cx="216" cy="22" r="22" opacity=".12"/></g><text class="xs" x="14" y="108">128×128/帧 · 900ms · steps(8)</text></g>
+    <g transform="translate(528)"><rect class="p1" width="262" height="118" rx="6"/><text class="t" x="14" y="24">AN02 稀疏数据粒子</text><g fill="#dff9ff"><circle cx="35" cy="53" r="1"/><circle cx="82" cy="72" r="1.5" opacity=".55"/><circle cx="143" cy="47" r="1" opacity=".7"/><path d="M191 62h12M223 43h8" stroke="#dff9ff" stroke-opacity=".55"/></g><path class="dim" d="M25 88 232 36"/><text class="xs" x="14" y="108">512×512 · 12fps · 4s · WebP</text></g>
+    <g transform="translate(810)"><rect class="p1" width="262" height="118" rx="6"/><text class="t" x="14" y="24">AN03 故障扫描层</text><path d="M18 47h66l12 7h73l8-7h60M31 69h39l7 6h93l10-6h57" fill="none" stroke="#dff9ff" stroke-opacity=".55"/><rect x="94" y="40" width="58" height="4" fill="#b78cff" opacity=".22"/><text class="xs" x="14" y="108">512×256 · 10fps · 1.6s · WebP</text></g>
+  </g>
+  <circle class="num1" cx="1153" cy="796" r="12"/><text class="number" x="1149" y="800">5</text>
+
+  <text class="xs" x="34" y="1025">接入规则：CSS / mask / motion 全归 Aster·皮肤；语义 icon ID 由 Aster·系统消费；资源经 Aster Mod 与资源索引落本地；插件不改。</text>
+</svg>

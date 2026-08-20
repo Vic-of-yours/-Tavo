@@ -1,6 +1,6 @@
 {
   "schema": "aster.blueprint-calibration-decisions/v1",
-  "version": "calibration-r001",
+  "version": "calibration-r002",
   "status": "calibration-required",
   "updatedAt": "2026-08-21",
   "allowedDecisionStatus": [
@@ -11,6 +11,13 @@
     "deferred"
   ],
   "rule": "No B1 implementation begins until every P0 decision is accepted, revised or explicitly rejected with a replacement contract.",
+  "resolvedAudits": {
+    "fullFileDisposition": "manifests/full-file-disposition.json",
+    "fileRepresentations": 2667,
+    "unknownDecisions": 0,
+    "classifiedRuntimeVisuals": 94,
+    "portraitRasterFiles": 0
+  },
   "architectureCoverageAudit": {
     "candidateTargetModules": 86,
     "directlyTargetedByMigrationRows": 65,

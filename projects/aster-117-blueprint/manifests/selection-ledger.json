@@ -1,7 +1,9 @@
 {
   "schema": "aster.selection-ledger/v1",
-  "release": "117-to-aster-blueprint-r001",
-  "ironRule": "The latest code and asset packages contain no exact duplicate file content. Historical versions, nested delivery archives and obsolete outputs are absent from the live tree and remain traceable by Git plus source hashes.",
+  "release": "117-to-aster-blueprint-r002",
+  "ironRule": "Every file in the cleaned current tree enters exactly one of the latest code/assets packages. Exact duplicate content fails the build. Excluded source files require an explicit row in manifests/full-file-disposition.json; a source hash is traceability evidence but is not recoverable Git history.",
+  "fullDisposition": "manifests/full-file-disposition.json",
+  "gitHistoryCoverage": "Git covers only files actually committed to the r002 branch. The four original attachment byte streams are not claimed recoverable from Git unless separately archived.",
   "auditedDuplicateEvidence": {
     "Projects.zip": {
       "expandedFiles": 2381,

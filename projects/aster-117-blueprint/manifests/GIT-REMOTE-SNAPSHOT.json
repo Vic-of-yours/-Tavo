@@ -1,5 +1,8 @@
 {
   "schema": "aster.git-remote-snapshot/v1",
+  "status": "historical-r001-attestation",
+  "release": "r001",
+  "supersededBy": "r002 remote verification is performed after publishing because a package cannot embed its own final Git commit without circular hashing",
   "verifiedAt": "2026-08-21",
   "repository": "Vic-of-yours/-Tavo",
   "pullRequest": {

@@ -1,6 +1,6 @@
 # 117 → Aster 蓝图校准登记册
 
-版本：`calibration-r001`  
+版本：`calibration-r002`  
 日期：2026-08-21  
 状态：待用户与实现方共同校准；不是最终设计签字，也不是 86 模块实现完成声明。
 
@@ -21,13 +21,15 @@
 |---|---|---|
 | FACT-001 | 四份用户输入均已做只读结构、CRC/JSON、路径安全和 SHA-256 检查，没有执行参考包代码。 | `audit/PROJECT-AUDIT.md` |
 | FACT-002 | `Projects.zip` 展开树存在 32 个精确重复组、61 份冗余副本；v117 叶子存在 8 个精确重复组。 | `manifests/selection-ledger.json` |
-| FACT-003 | 当前候选工作树 168 文件，精确重复内容组 0，人物立绘位图 0。 | `release/ASTER-117-BLUEPRINT-RELEASE.json` |
+| FACT-003 | r002 清理树 193 个源文件（Code 96 / Assets 97），精确重复内容组 0，人物立绘位图 0。 | `audit/CODE-PACKAGE-COMPLETENESS-AUDIT.md` 与 release manifest |
 | FACT-004 | 当前候选实现只有 36 个可执行模块；86 是目标架构数字，不是已完成数量。 | 总蓝图与 release manifest |
 | FACT-005 | v117 七书来源账为 172 行；167 行已映射到候选蓝图，5 行已验证退役，`implementedVerified=0`。 | `blueprint/v117-to-aster-ledger.json` |
 | FACT-006 | r189 的已验证连续性基线为 83 个模块、25 个 disabled 叙事块、1 个 EJS 路由、8 个宿主 marker、四模式与固定六槽。 | `blueprint/ASTER-117-MASTER-BLUEPRINT.md` |
 | FACT-007 | 小手机 TPG 与牧场 JSON 均没有可验证的仓库、commit 和 license；不能把其代码或正文当成可直接合并的上游。 | `manifests/intake-sources.json` |
 | FACT-008 | 当前 Tavo 高优先级阻断包括动态世界书代码执行、网络权限漂移、导入预检不完整和 EJS/预设/正则链未落地。 | `audit/TAVO-API-AUDIT.md` |
-| FACT-009 | GitHub B0 提交的 12 个文件已逐项用 Git blob SHA-1 与本地字节比对，12/12 一致。 | `manifests/GIT-REMOTE-SNAPSHOT.json` |
+| FACT-009 | GitHub r001 的 12 个文件曾逐项完成 Git blob SHA-1 与本地字节比对；r002 只有在更新远端快照并重新比对后才可声明同步。 | `manifests/GIT-REMOTE-SNAPSHOT.json` |
+| FACT-010 | 四个用户来源的 2,667 个文件表示均有互斥处置；未知决策为 0。 | `manifests/full-file-disposition.json` |
+| FACT-011 | r001 与 r002 的 94 个视觉文件哈希集合相等；分类改名没有丢失或改写素材。 | `assets/catalog.json` 与代码包完整性审计 |
 
 ## 1.1 已知不完整项
 
@@ -40,11 +42,11 @@
 | GAP-003 | 架构 JSON 尚无逐模块 `dependsOn / provides / consumes / lifecycle / forbiddenOwnership / tests`。 | 依赖 DAG、加载顺序、服务唯一性和原子回滚还不能机器验收。 |
 | GAP-004 | 25 panel、16 App、62 参数只有总数，没有逐项产品追踪矩阵。 | 可见能力是否完整保留尚需逐项校准。 |
 | GAP-005 | loader 仍有“完全静态”与“哈希允许清单”两种候选，没有最终选择。 | B1 的安全边界未锁定。 |
-| GAP-006 | selection ledger 是聚合处置账，不是所有 2,381+256+20+8 项的逐文件处置表。 | 能证明去重结果，不能仅凭本包复演全部取舍。 |
 | GAP-007 | Git 保存的是 B0 可恢复交付，不含四份原始附件和全部旧历史；168 个工作区文件主要在双 ZIP 中。 | Git 足以继续蓝图/施工，但不能替代原始附件重新审计。 |
 | GAP-008 | 浏览器门明确 SKIP，真实 Tavo 设备、权限、EJS 与 hostless 安装未验。 | 当前不是可发布安装版。 |
-| GAP-009 | 16 个保留 raster 的“非人物”分类来自审计判断，尚无逐素材机器分类/复核人账。 | 后续应补 assetClass/provenance/reviewer 门。 |
 | GAP-010 | `repository.host-data` 与“Repository 不直连 `tavo.*`”边界未写清。 | 应由 Repository 定义 port/schema，真正 Tavo adapter 放 runtime/System 后注入。 |
+
+已在 r002 闭合：旧 GAP-006（全输入逐文件处置账）与旧 GAP-009（16 个栅格逐项用途/尺寸/格式/非人物登记）。
 
 ## 2. 校准状态词
 

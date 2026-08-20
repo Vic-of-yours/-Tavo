@@ -1,7 +1,7 @@
 {
   "schema": "aster.intake-sources/v1",
-  "auditedAt": "2026-08-20",
-  "policy": "Every intake is immutable evidence. Only selected, unique current files enter the live workspace; obsolete versions remain Git history only.",
+  "auditedAt": "2026-08-21",
+  "policy": "Every intake is immutable evidence. Only selected, unique current-value files enter the live workspace. Every excluded representation is recorded in the full disposition ledger; Git recovery is claimed only for bytes actually committed.",
   "sources": [
     {
       "id": "projects-handoff",
@@ -12,7 +12,7 @@
       "provenance": "user-uploaded",
       "upstreamRepository": null,
       "license": "unknown",
-      "latestWorkspaceAction": "do-not-embed; preserve hash and expanded-history commit because the archive exceeds GitHub's normal 100 MiB blob limit"
+      "latestWorkspaceAction": "do-not-embed; preserve source hash and full per-file disposition. Raw attachment recovery from Git is not currently claimed because the archive exceeds GitHub's normal 100 MiB blob limit"
     },
     {
       "id": "v117-canonical",
@@ -23,7 +23,7 @@
       "provenance": "user-uploaded; no repository URL or commit embedded",
       "upstreamRepository": null,
       "license": "unknown",
-      "latestWorkspaceAction": "do-not-embed; translate responsibilities into the 172-row ledger"
+      "latestWorkspaceAction": "do-not-embed; translate responsibilities into the 172-row ledger and retain raw-source hash. Raw attachment recovery from Git is not currently claimed"
     },
     {
       "id": "phone-reference",
@@ -68,4 +68,3 @@
     "https://docs.tavoai.dev/cn/guides/advanced-rendering/"
   ]
 }
-

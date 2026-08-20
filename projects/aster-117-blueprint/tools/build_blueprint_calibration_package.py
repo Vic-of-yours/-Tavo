@@ -12,7 +12,7 @@ from pathlib import Path, PurePosixPath
 
 ROOT = Path(__file__).resolve().parents[1]
 DIST = ROOT / "dist"
-OUTPUT = DIST / "Aster-117-Blueprint-Calibration-r001.zip"
+OUTPUT = DIST / "Aster-117-Blueprint-Calibration-r002.zip"
 FIXED_TIME = (2026, 8, 21, 0, 0, 0)
 
 PAYLOAD = (
@@ -23,8 +23,16 @@ PAYLOAD = (
     ("blueprint/v117-to-aster-ledger.json", "blueprint/v117-to-aster-ledger.json"),
     ("audit/PROJECT-AUDIT.md", "audit/PROJECT-AUDIT.md"),
     ("audit/TAVO-API-AUDIT.md", "audit/TAVO-API-AUDIT.md"),
+    ("audit/CODE-PACKAGE-COMPLETENESS-AUDIT.md", "audit/CODE-PACKAGE-COMPLETENESS-AUDIT.md"),
+    ("blueprint/ACCEPTANCE.md", "blueprint/ACCEPTANCE.md"),
+    ("blueprint/design/orbit/README.md", "blueprint/design/orbit/README.md"),
+    ("blueprint/assets/README.md", "blueprint/assets/README.md"),
+    ("blueprint/assets/AUDIT.md", "blueprint/assets/AUDIT.md"),
+    ("blueprint/assets/ACCEPTANCE.md", "blueprint/assets/ACCEPTANCE.md"),
+    ("blueprint/assets/PROVENANCE.md", "blueprint/assets/PROVENANCE.md"),
     ("manifests/intake-sources.json", "manifests/intake-sources.json"),
     ("manifests/selection-ledger.json", "manifests/selection-ledger.json"),
+    ("manifests/full-file-disposition.json", "manifests/full-file-disposition.json"),
     ("manifests/GIT-REMOTE-SNAPSHOT.json", "manifests/GIT-REMOTE-SNAPSHOT.json"),
     ("dist/ASTER-117-BLUEPRINT-RELEASE.json", "external-artifacts/ASTER-117-BLUEPRINT-RELEASE.json"),
     ("dist/SHA256SUMS.txt", "external-artifacts/SHA256SUMS.txt"),
@@ -83,16 +91,15 @@ def main() -> None:
         raise SystemExit("architecture target is not internally consistent at 86")
     if len(ledger["rows"]) != 172 or ledger["counts"]["implementedVerified"] != 0:
         raise SystemExit("migration ledger must remain 172 rows and unimplemented at B0")
-    if remote["comparison"] != {
-        "algorithm": "Git blob SHA-1 computed as SHA1('blob ' + byteLength + NUL + bytes)",
-        "remoteFiles": 12,
-        "localFiles": 12,
-        "matched": 12,
-        "mismatched": 0,
-        "missingRemote": 0,
-        "missingLocal": 0,
-    }:
-        raise SystemExit("Git remote snapshot is not a clean 12/12 match")
+    comparison = remote.get("comparison") or {}
+    if (
+        comparison.get("mismatched") != 0
+        or comparison.get("missingRemote") != 0
+        or comparison.get("missingLocal") != 0
+        or comparison.get("matched") != comparison.get("remoteFiles")
+        or comparison.get("matched") != comparison.get("localFiles")
+    ):
+        raise SystemExit("Git remote snapshot is not a complete byte match")
     if len(decisions["decisions"]) != 30:
         raise SystemExit("calibration decision register must contain CAL-001 through CAL-030")
     if {item["id"] for item in decisions["decisions"]} != {
@@ -109,9 +116,9 @@ def main() -> None:
 
     manifest = {
         "schema": "aster.blueprint-calibration-package/v1",
-        "version": "calibration-r001",
+        "version": "calibration-r002",
         "status": "calibration-required-not-implemented",
-        "purpose": "Review and revise the B0 blueprint before B1 implementation.",
+        "purpose": "Review and revise the r002 blueprint before B1 implementation.",
         "containsCodePackage": False,
         "containsAssetPackage": False,
         "targetExecutableModulesCandidate": 86,

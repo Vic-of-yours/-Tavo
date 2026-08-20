@@ -1,7 +1,7 @@
 {
   "schema": "aster.architecture/v1",
-  "release": "117-to-aster-blueprint-r001",
-  "status": "blueprint-frozen-not-implemented",
+  "release": "117-to-aster-blueprint-r002",
+  "status": "draft-for-calibration-not-implemented",
   "currentExecutableModules": 36,
   "targetExecutableModules": 86,
   "books": {

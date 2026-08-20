@@ -1,0 +1,43 @@
+{
+  "schema": "aster.world.social.state/v1.1",
+  "invariants": {
+    "singleRoot": true,
+    "separateThreadOverlay": false,
+    "mobileBottomModeBar": false,
+    "verticalRailAtAllWidths": true,
+    "restoreSourceScroll": true,
+    "presentationOwnedBySection": true,
+    "customPresentationFallback": true,
+    "entryFieldsAreIndependent": true
+  },
+  "state": {
+    "mode": "messages",
+    "presentation": "messages",
+    "surface": "index",
+    "selectedEntryId": null,
+    "queryByMode": {},
+    "filtersByMode": {},
+    "sortByMode": {},
+    "scrollByMode": {},
+    "detailScrollByEntry": {}
+  },
+  "presentation": {
+    "source": "socialSections[mode].presentation",
+    "builtIn": ["messages", "forum", "live"],
+    "custom": "Any non-empty presentation id may be registered; absent a specialized presenter, reuse the generic index/detail presenter."
+  },
+  "entryContract": {
+    "unread": { "type": "non-negative-integer", "default": 0, "independent": true },
+    "followed": { "type": "boolean", "default": false, "independent": true },
+    "online": { "type": "boolean", "default": false, "independent": true },
+    "kind": { "type": "string", "default": "generic", "independent": true },
+    "status": { "type": "string", "default": "ready", "independent": true }
+  },
+  "transitions": [
+    { "event": "REGISTER_SECTION", "from": "*", "to": "same", "effect": "resolve section presentation; use generic fallback when no specialized presenter exists" },
+    { "event": "SELECT_MODE", "from": "*", "to": "index", "effect": "resolve presentation from section and restore mode view" },
+    { "event": "OPEN_ENTRY", "from": "index", "to": "detail", "effect": "reuse social.main and preserve presentation" },
+    { "event": "BACK", "from": "detail", "to": "index", "effect": "restore source scroll" },
+    { "event": "CLOSE", "from": "*", "to": "closed", "effect": "close world-social root" }
+  ]
+}

@@ -1,0 +1,47 @@
+{
+  "schema": "aster.selected-ui.default-registry/v1.1",
+  "api": {
+    "registerOrbit": "canonical",
+    "unregisterOrbit": "canonical",
+    "registerOrbitEntry": "compatibility-alias",
+    "unregisterOrbitEntry": "compatibility-alias",
+    "registerRoute": "outer-ring-facade"
+  },
+  "orbitEntries": [
+    { "id": "team", "ring": "inner", "label": "队伍", "iconAssetId": "ui.orbit.team", "order": 10, "accent": "cyan", "action": { "type": "command", "target": "world.team.open" } },
+    { "id": "encounter", "ring": "inner", "label": "遭遇", "iconAssetId": "ui.orbit.encounter", "order": 20, "accent": "violet", "action": { "type": "command", "target": "world.encounter.open" } },
+    { "id": "check", "ring": "inner", "label": "检定", "iconAssetId": "ui.orbit.check", "order": 30, "accent": "cyan", "action": { "type": "command", "target": "world.check.open" } },
+    { "id": "spell", "ring": "inner", "label": "法术", "iconAssetId": "ui.orbit.spell", "order": 40, "accent": "violet", "action": { "type": "command", "target": "world.spell.open" } },
+    { "id": "map-marker", "ring": "inner", "label": "地图标记", "iconAssetId": "ui.orbit.map-marker", "order": 50, "accent": "cyan", "action": { "type": "command", "target": "world.marker.open" } },
+    { "id": "world-bag", "ring": "outer", "label": "玩家背包", "iconAssetId": "ui.icon.bag", "order": 10, "accent": "cyan", "action": { "type": "panel", "target": "world-bag" } },
+    { "id": "world-quest", "ring": "outer", "label": "任务主线", "iconAssetId": "ui.icon.quest", "order": 20, "accent": "violet", "action": { "type": "panel", "target": "world-quest" } },
+    { "id": "world-social", "ring": "outer", "label": "最新消息", "iconAssetId": "ui.icon.message", "order": 30, "accent": "cyan", "action": { "type": "panel", "target": "world-social" } },
+    { "id": "world-following", "ring": "outer", "label": "关注人物", "iconAssetId": "ui.icon.following", "order": 40, "accent": "violet", "action": { "type": "panel", "target": "world-following" } }
+  ],
+  "orbitState": {
+    "sourceOfTruth": "activeId",
+    "index": "derived from the current ring order",
+    "restoreOrder": ["activeId", "nearest-valid-index", "first-entry"],
+    "defaults": {
+      "inner": { "activeId": "encounter", "index": 1 },
+      "outer": { "activeId": "world-social", "index": 2 }
+    }
+  },
+  "socialSections": [
+    { "id": "messages", "label": "消息", "title": "世界通讯", "iconAssetId": "ui.icon.message", "presentation": "messages", "order": 10, "pageSize": 6 },
+    { "id": "forum", "label": "论坛", "title": "浮乱小镇·世界板块", "iconAssetId": "ui.icon.forum", "presentation": "forum", "order": 20, "pageSize": 6 },
+    { "id": "live", "label": "直播", "title": "世界直播", "iconAssetId": "ui.icon.live", "presentation": "live", "order": 30, "pageSize": 6 }
+  ],
+  "socialContract": {
+    "presentationSource": "socialSections[id].presentation",
+    "builtInPresentations": ["messages", "forum", "live"],
+    "customPresentationFallback": "generic-index-detail",
+    "independentEntryFields": {
+      "unread": { "type": "non-negative-integer", "default": 0 },
+      "followed": { "type": "boolean", "default": false },
+      "online": { "type": "boolean", "default": false },
+      "kind": { "type": "string", "default": "generic" },
+      "status": { "type": "string", "default": "ready" }
+    }
+  }
+}

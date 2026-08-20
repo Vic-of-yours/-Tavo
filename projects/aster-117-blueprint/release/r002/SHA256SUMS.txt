@@ -1,0 +1,3 @@
+0ff45ee8afbac4bddd42bb9156f87a6268dadd406705b7d2ea2e323bb627aef6  Aster-117-Blueprint-Code-r002.zip
+b6c232c1ef812c839158f38a855d9bdf08c3bf6b90801bc30c6d267f3dd896c6  Aster-117-Blueprint-Assets-r002.zip
+4331fa839ec66b50218ccefdced72c3efeb347576a389256b38b5e372e9cf8d0  ASTER-117-BLUEPRINT-RELEASE.json
