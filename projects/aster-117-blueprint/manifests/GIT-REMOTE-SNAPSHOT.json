@@ -1,0 +1,113 @@
+{
+  "schema": "aster.git-remote-snapshot/v1",
+  "verifiedAt": "2026-08-21",
+  "repository": "Vic-of-yours/-Tavo",
+  "pullRequest": {
+    "number": 1,
+    "url": "https://github.com/Vic-of-yours/-Tavo/pull/1",
+    "state": "open",
+    "draft": true,
+    "mergeable": true,
+    "base": "main",
+    "baseSha": "3e21fa894134c9ce1f163e67579f929ff1490aef",
+    "head": "codex/117-to-aster-blueprint",
+    "headSha": "8923589c8debbcd00e62331337ec00ded7fbbd12"
+  },
+  "scope": "The 12-file B0 delivery committed at headSha. It proves byte identity for the published blueprint documents, manifests and two release ZIPs; it does not claim the original 111.6 MB Projects.zip or unverified third-party reference packages were embedded in Git.",
+  "comparison": {
+    "algorithm": "Git blob SHA-1 computed as SHA1('blob ' + byteLength + NUL + bytes)",
+    "remoteFiles": 12,
+    "localFiles": 12,
+    "matched": 12,
+    "mismatched": 0,
+    "missingRemote": 0,
+    "missingLocal": 0
+  },
+  "files": [
+    {
+      "remotePath": "projects/aster-117-blueprint/README.md",
+      "localPath": "README.md",
+      "bytes": 2287,
+      "gitBlobSha1": "61911c49986d690027037c6f5b92afec1723606f",
+      "sha256": "35b0e9b3f03e1bc89e74a39ec3ce55e4c4858f7a50c3407f8191af107464a9de"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/audit/PROJECT-AUDIT.md",
+      "localPath": "audit/PROJECT-AUDIT.md",
+      "bytes": 14144,
+      "gitBlobSha1": "7a8d0a6e98cddb6507ddf25f26f14532c2553b5a",
+      "sha256": "1d11e14aa8cca41187c46f9e6c6985186686f4d09a14e949684c0f8c039f070e"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/audit/TAVO-API-AUDIT.md",
+      "localPath": "audit/TAVO-API-AUDIT.md",
+      "bytes": 21970,
+      "gitBlobSha1": "d7c290f4f4f687dd61f8ec896c8cbc39526c1de0",
+      "sha256": "13c6403e88a48bc1730cead82b2a41418acbefa980f27b457462eb044798af83"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/blueprint/ASTER-117-MASTER-BLUEPRINT.md",
+      "localPath": "blueprint/ASTER-117-MASTER-BLUEPRINT.md",
+      "bytes": 33491,
+      "gitBlobSha1": "c70c68b9d13578b393f8c3763246bf06a6928926",
+      "sha256": "436a7c7f184bd1af9efa44201dfc65848b6c38be8b0525cbb4d06d4ab5788fbf"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/blueprint/aster-architecture-v1.json",
+      "localPath": "blueprint/aster-architecture-v1.json",
+      "bytes": 4734,
+      "gitBlobSha1": "1733f46461d68a7f10d48c1e8318180e50de05ef",
+      "sha256": "4ec09f3911c119da4f6ff59d50733d682db53e4b0ea45e5076dc096ef01b87e7"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/blueprint/v117-to-aster-ledger.json",
+      "localPath": "blueprint/v117-to-aster-ledger.json",
+      "bytes": 163534,
+      "gitBlobSha1": "0bc70d7cce951328bac96b59747f6ff9e1897e53",
+      "sha256": "a24c7bffdb3aa85d5387a2aae81e7194fee9955482f7ac016e29211b383d562e"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/manifests/intake-sources.json",
+      "localPath": "manifests/intake-sources.json",
+      "bytes": 3230,
+      "gitBlobSha1": "0e1f1c9b356f85d88ba1ed0055138efb160c8aa4",
+      "sha256": "748b418888296925968e4a00a9e333804892f5a2bb400c83f51e670b986b98d7"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/manifests/selection-ledger.json",
+      "localPath": "manifests/selection-ledger.json",
+      "bytes": 2887,
+      "gitBlobSha1": "2bbf76f214ad756fb2b7fa9eefeb1668a640b34c",
+      "sha256": "c301328f631e97c9bdf64d9e4476be9ea3144042d3f56b5ad7a56fdeedbf6c7f"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/release/r001/ASTER-117-BLUEPRINT-RELEASE.json",
+      "localPath": "dist/ASTER-117-BLUEPRINT-RELEASE.json",
+      "bytes": 804,
+      "gitBlobSha1": "6867ca66fe18167d3e2320f616f9177c45cf9906",
+      "sha256": "fc64000019329012d63a49ada3ef7ad5f6beebd651d7987490c0f5fe7b02e911"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/release/r001/Aster-117-Blueprint-Assets-r001.zip",
+      "localPath": "dist/Aster-117-Blueprint-Assets-r001.zip",
+      "bytes": 4279320,
+      "gitBlobSha1": "9d0a193c6d084b3aae9f3693245af875f4e8a71a",
+      "sha256": "80c51d1f1da289987574fdd2717a9154eab052b18c70b40188fc3b797e70b788"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/release/r001/Aster-117-Blueprint-Code-r001.zip",
+      "localPath": "dist/Aster-117-Blueprint-Code-r001.zip",
+      "bytes": 342003,
+      "gitBlobSha1": "d74bc756c77d897fe1c383b36b3360bb3a3dd1d1",
+      "sha256": "7a1f054a2f7e0bd1106863f717cc362d0ef1d5b026b69f53758f4e90419289f2"
+    },
+    {
+      "remotePath": "projects/aster-117-blueprint/release/r001/SHA256SUMS.txt",
+      "localPath": "dist/SHA256SUMS.txt",
+      "bytes": 301,
+      "gitBlobSha1": "67bfb64416b09e3c60c95fa692f7a93ec1039f4f",
+      "sha256": "aa6fb08cc5967b257c19056f62d79da2973cef8e5d86f7e98736ec8cee651f81"
+    }
+  ],
+  "verdict": "complete-for-b0-delivery"
+}
