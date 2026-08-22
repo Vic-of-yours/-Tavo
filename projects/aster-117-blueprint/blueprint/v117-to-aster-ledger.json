@@ -1,0 +1,4396 @@
+{
+  "schema": "aster.migration.r117-seven-book/v1",
+  "generatedFrom": {
+    "archive": "vi-project-dev-v2-v117.zip",
+    "sha256": "7cf04ac30f641a70656eff9ecd43e854e45b87ac35de742681e06f7f5064e631"
+  },
+  "policy": {
+    "sourceBooks": 7,
+    "engineEntries": 147,
+    "narrativeEntries": 3,
+    "presetPrompts": 22,
+    "totalRows": 172,
+    "pluginTracksSeparate": [
+      "io.aster.narrative.runtime",
+      "io.aster.mod-importer"
+    ],
+    "forbiddenStatus": [
+      "missing",
+      "unmapped",
+      "assumed",
+      "partial-counted-as-complete"
+    ]
+  },
+  "counts": {
+    "source": {
+      "Tavo_Vi_预设·叙事协议": 22,
+      "Vic·叙事书": 3,
+      "Vic·引擎": 21,
+      "Vic·引擎·功能": 21,
+      "Vic·引擎·图鉴": 34,
+      "Vic·引擎·皮肤": 17,
+      "Vic·引擎·系统": 54
+    },
+    "legacyDisposition": {
+      "retired-explicit": 4,
+      "retired-inert": 1,
+      "superseded-contract": 24,
+      "superseded-policy": 1,
+      "translated": 141,
+      "translated-safe-adapter": 1
+    },
+    "asterStatus": {
+      "blueprint-mapped": 167,
+      "retired-verified": 5
+    },
+    "implementedVerified": 0
+  },
+  "rows": [
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 1,
+      "sourceId": "artifact.engine.readme",
+      "sourceName": "[说明]Vic·引擎 模块书",
+      "sourceEntrySha256": "7da4d872712212a0f902d9f8f7d253a75f00968a75a1f9dae1be3f6d4e555705",
+      "sourceContentSha256": "efdf6288f7321f5e68650ad9077339a12eff5ca1281fc4983eb2e38befc8d36d",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.foundation"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 2,
+      "sourceId": "vic.core.lib",
+      "sourceName": "[模块]core·函数库",
+      "sourceEntrySha256": "4f0979c5e2720ac39348401918d36ae539dec682e6f8eb5da5a26d1d685522f1",
+      "sourceContentSha256": "2274afea05596f1e96363b660a94468be2c520fd4d95cea9905b66ec5265b43d",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.foundation",
+        "aster.kernel.events",
+        "aster.kernel.schema"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 3,
+      "sourceId": "vic.core.registries",
+      "sourceName": "[模块]core·注册中心",
+      "sourceEntrySha256": "8547b8b7f7b5b1c24e5869baba2f14973ba24e2bd147f6c9240c4b432cdb4b81",
+      "sourceContentSha256": "09a99dd62df3a40f8011982e9fb28f9b39a930184588247ee5074c6252b57c91",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.registry",
+        "aster.kernel.services"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 4,
+      "sourceId": "vic.core.slots",
+      "sourceName": "[模块]core·槽位注册中心",
+      "sourceEntrySha256": "f465536f40f1455de8fe975d799e1dbfd6a39effb4b281209b9e906f01995eac",
+      "sourceContentSha256": "722baca428c20d6192ba2220f8e0de0f2b54288a87fdff42809db6b539b5d140",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.registries",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 5,
+      "sourceId": "vic.panel.registry",
+      "sourceName": "[模块]面板·页注册中心",
+      "sourceEntrySha256": "b7e529c336ae5b8bb8d71126340afd4f3a5c6fe0e91777f992b99a4c2e78cb0c",
+      "sourceContentSha256": "3073f8beb1a2aa38b3a1e072a1f46bd61c89115fe26e67923a1e0df33713c38f",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.contracts",
+        "aster.system.shell"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 6,
+      "sourceId": "vic.data.registry",
+      "sourceName": "[模块]data·数据注册中心",
+      "sourceEntrySha256": "94484743b77c3020ec12b54050bd3a6c45f38721e599208e6408d14383cb4344",
+      "sourceContentSha256": "4324320bd8396ada0c0f1f465d2ee94c9a6fbfc33169f067af6ed0a99a63f931",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.imports",
+        "aster.repository.catalog"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 7,
+      "sourceId": "vic.data.routes-base",
+      "sourceName": "[模块]data·内置导入路由",
+      "sourceEntrySha256": "188d9caeef5173563301150b70bfe00d13d2c65edc424a89368d969816b4f934",
+      "sourceContentSha256": "e3557587c9c445e22769eced2884cc48c2a889602a0338bc0954b7f600de5466",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.import-routes"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 8,
+      "sourceId": "vic.data.resources",
+      "sourceName": "[模块]data·本地资源库",
+      "sourceEntrySha256": "12436873063097e6db6cd8b5251b978d4a7805fae380ab4cc79e813ddef40abf",
+      "sourceContentSha256": "43a491eed7ac548e2e5769ec310ddd4699c11adabe2219b2a0a54d3396f792db",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.assets",
+        "aster.repository.resources"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 9,
+      "sourceId": "vic.data.browser",
+      "sourceName": "[模块]data·在线浏览修改",
+      "sourceEntrySha256": "0abc5e67a5049c22851f3903bce5e8c2b59986117c3a2d6edcff66746af92ac5",
+      "sourceContentSha256": "399dc438682867725b364a93056f0b9eb3672065bba850d5f3661a121f98e8af",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.search",
+        "aster.system.project-save-apps",
+        "aster.system.data-manager"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 10,
+      "sourceId": "vic.data.manifest",
+      "sourceName": "[模块]数据域·资源清单",
+      "sourceEntrySha256": "058ffc63f0e15a5ca09a591615b7f8219c25417b6e3e0f0ef4266b6d201fb337",
+      "sourceContentSha256": "623d2e74de01a50fe642f00e91f2b4af632f243ec645dd263f29219da52793ad",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.catalog",
+        "aster.repository.resources"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 11,
+      "sourceId": "vic.action.manager",
+      "sourceName": "[模块]动作·设置",
+      "sourceEntrySha256": "e99809c0558cad4609b20c88787a3424683867498168dc430ac19df5e5895829",
+      "sourceContentSha256": "9656fd3ba9b74b598e00360cb0892dd9e18d8816bfb8b66f4a1558e90bc803dd",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.commands"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 12,
+      "sourceId": "vic.shell.mounter",
+      "sourceName": "[模块]壳层挂载器",
+      "sourceEntrySha256": "978eb4f2d7ddbc21850a4ed39fad64c92b6eb17862e3f8f11d66d708026a6ff5",
+      "sourceContentSha256": "48bc7520b90d85d3ac8574240d8429848d03411fcde3d5b1909407bf505e6a38",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.surfaces",
+        "aster.kernel.host"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 13,
+      "sourceId": "vic.shell.overlay",
+      "sourceName": "[模块]壳层·面板宿主",
+      "sourceEntrySha256": "17c4f66d0c3371c444e3d2b893b188e9bd6895503b0e32b33019913440f821a2",
+      "sourceContentSha256": "bc6855561197db43c9d508c91304c5770721669c9a79b4486e80256453d29717",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.surfaces",
+        "aster.system.shell"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 14,
+      "sourceId": "vic.shell.panel",
+      "sourceName": "[模块]壳层·设置面板骨架",
+      "sourceEntrySha256": "bfa1a50f3d2ab4be5e5072563318b55c467ab03d716a5ba0d63f8c183f53ac59",
+      "sourceContentSha256": "de83182c640ac63564067cd572a202d5b35f87dcccdcafd39677723808d8f8fe",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.shell"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 15,
+      "sourceId": "vic.panel.dev",
+      "sourceName": "[模块]面板·开发控制",
+      "sourceEntrySha256": "0fcec83d4a6a922fa175d7620f8fdcb993de06d2d1a317b4f215cfc42d856275",
+      "sourceContentSha256": "7a0fdfbc86414d1f2e460278954d8694f80145941106579e38244bb44028784d",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.mode-controls",
+        "aster.system.project-save-apps",
+        "aster.system.data-manager"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 16,
+      "sourceId": "vic.panel.import",
+      "sourceName": "[模块]面板·数据导入",
+      "sourceEntrySha256": "48587246d8c1196ea2b3b3cacd1c4afe4855798d7efb1f87926880867e456e25",
+      "sourceContentSha256": "24138981e1ff80a7ad4929f2db69c1b90405a533e469e672b58dd023e2d094e8",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.project-save-apps",
+        "aster.system.data-manager"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 17,
+      "sourceId": "vic.panel.data",
+      "sourceName": "[模块]面板·数据管理",
+      "sourceEntrySha256": "591749455640f3415e50b9c06c0f8d39018001c3d5f7087307fe037b645f8509",
+      "sourceContentSha256": "f5d5e9ba0bb0f8a937a64a34ef25b258e0637a7bc1030e541654a6a193c3912e",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.project-save-apps",
+        "aster.system.data-manager"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 18,
+      "sourceId": "vic.panel.resImport",
+      "sourceName": "[模块]面板·资源导入",
+      "sourceEntrySha256": "697931ee2b66e94f43471ba4b73112723a10e847af62bae27090bccc893b2eb1",
+      "sourceContentSha256": "371b531539120be5467e41a74ae16f6e132f8e1f88f9b86d6ff395c5dddbd801",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.project-save-apps",
+        "aster.system.data-manager"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 19,
+      "sourceId": "vic.panel.resManage",
+      "sourceName": "[模块]面板·资源管理",
+      "sourceEntrySha256": "754f31733b052384bcae6eaffd7d90f2c78e8b537eaba0aeb477302563f650ea",
+      "sourceContentSha256": "5d875eb2721f89c4d3a59d0602de6ede81092c85636d3b880e95a6568d454cfc",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.project-save-apps",
+        "aster.system.data-manager"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 20,
+      "sourceId": "vic.core.selftest",
+      "sourceName": "[模块]core·自检",
+      "sourceEntrySha256": "3a02c6c4ffda2becdbac7266a9b443e37230e0e4ad7066bd6a04d8dcfd197f7a",
+      "sourceContentSha256": "51670c4bd743eecfd06563a67a7cb7eab639ef6a5fd94e4436df646e3f580d0a",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.selftest",
+        "aster.kernel.diagnostics"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎",
+      "sourceIndex": 21,
+      "sourceId": "vic.content.renderer",
+      "sourceName": "[模块]中央渲染器",
+      "sourceEntrySha256": "1df2f94a0d6e51f3a6314056962656cf262e7c71fe18fc35294b230138167f31",
+      "sourceContentSha256": "ff9526a396a1d81a2205563b465448a0d193f0c0d3054edb421273bbd4f28bed",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.kernel.renderer",
+        "aster.system.message-renderer"
+      ],
+      "reason": "按 v2 kernel/service/UI 合约迁移。",
+      "continuityEvidence": [
+        "verify-engine-vnext.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 1,
+      "sourceId": "vic.state.core",
+      "sourceName": "[模块]state·全局状态注册中心",
+      "sourceEntrySha256": "517b77d16a3ea1ed6e444c5c8e920353f1f75cf22e2da835bd8858143d962449",
+      "sourceContentSha256": "f4a9da1a011abe5eca97dc8b2109bb880186f1b20d42c2d0d98d937bfdf33cc2",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.contracts",
+        "aster.function.runtime"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 2,
+      "sourceId": "vic.fields.core",
+      "sourceName": "[模块]state·字段键注册中心",
+      "sourceEntrySha256": "23a80df976ddac4badaeeb8501587a804e275fc616aeb35fb5c3a863e97b6f8d",
+      "sourceContentSha256": "fe6224c8b1cdd16f1e9a8e65cc02281065af375e02cc7c4f1f38ce520e1f08f5",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.registries"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 3,
+      "sourceId": "vic.rules.core",
+      "sourceName": "[模块]state·规则原语引擎",
+      "sourceEntrySha256": "f6fb99d857afbbc5eeeeab069743d016d8df9052f096ca72ad566993fbd222aa",
+      "sourceContentSha256": "1db9f25f06283fa692f48137e6ac19a2ade4cd459e7638d911d37719cd8bd628",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.rules"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 4,
+      "sourceId": "vic.state.mode",
+      "sourceName": "[模块]state·叙事模式",
+      "sourceEntrySha256": "8e5030de775869c86b583e66ec1e05b7ecddc4a19cb553b3bae68d9595ae9a5c",
+      "sourceContentSha256": "99da8a275db379a94fb13d9ecf1dba2f5c62340893192469e1b75956f5841b90",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.modes"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 5,
+      "sourceId": "vic.merger.core",
+      "sourceName": "[模块]state·更新合并器",
+      "sourceEntrySha256": "3e1a8fab3f1c04495ccf94b329e5edbdc626cf1de9dd5c4ce2a6f0ae792d904d",
+      "sourceContentSha256": "82735ee30a9d8a60fdacc86e37a3f1cad0075204db9cb8b06d4d3c68c5e647fc",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.transactions",
+        "aster.function.commands"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 6,
+      "sourceId": "vic.snap.core",
+      "sourceName": "[模块]snap·快照核",
+      "sourceEntrySha256": "1aa2786d03dfa1551db541e1699fa2fc3a29becca278628a5951dd44b150381d",
+      "sourceContentSha256": "8874782e332ed056a099fcc6c82a7d5bf9bca862dee98b8b34d036e18cd4599d",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.narrative-frame",
+        "aster.function.frame-publisher"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 7,
+      "sourceId": "vic.todo.aiwork",
+      "sourceName": "[模块]todo·AI 工作层",
+      "sourceEntrySha256": "2302253d0ca0df46a3cfb014daaf3af44602f38426584318e91e01d8cc3eb7ad",
+      "sourceContentSha256": "04307c3f3b31ff7ece79068dd1d22dd277c86da5becc1d97548e751c33858619",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.continuity",
+        "aster.function.narrative-queue"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 8,
+      "sourceId": "vic.time.core",
+      "sourceName": "[模块]time·时间与历法",
+      "sourceEntrySha256": "84235a76789e954593801f79b9b2d3affb5dbb073578465515ed2af1bb545a2c",
+      "sourceContentSha256": "24ccb6c83b24b9676874ec3b6782a3b4acb88ffd0986fa8c69740222efe0fa5d",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.clock"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 9,
+      "sourceId": "vic.dice.core",
+      "sourceName": "[模块]dice·随机与判定",
+      "sourceEntrySha256": "1dc1821bcaf74aa47a472ac92ab87096d9e0f8059ee8d113f0421d26924c8ab0",
+      "sourceContentSha256": "6d86bc7e2671b3c8b32d8121f443ad5e7bfd728cc15177ed985212fe1d61759c",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.random"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 10,
+      "sourceId": "vic.event.core",
+      "sourceName": "[模块]event·事件调度器",
+      "sourceEntrySha256": "72e848b6e128a887bb30cbbf571c565a212cdf97774c8cbcaf7ca8b90a3c8ded",
+      "sourceContentSha256": "6e97fd8e2f170a8889a39de9ed6ac856e99e81110df29339cc8a899c89cb79b0",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.scheduler"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 11,
+      "sourceId": "vic.inv.core",
+      "sourceName": "[模块]inv·背包与装备",
+      "sourceEntrySha256": "ac549eaf88c64681bfb91953ed840ab0b64903d6379168598e3a71e9a89db9af",
+      "sourceContentSha256": "dcd37c65d5a1531e79838c0ee1a77e46678867de9d2dd3358f0f790c84e4bf98",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.inventory"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 12,
+      "sourceId": "vic.quest.core",
+      "sourceName": "[模块]quest·任务引擎",
+      "sourceEntrySha256": "134ea2eae140a57d6fec11bdf02942069f91ce599605654c87d1ab3027f4d318",
+      "sourceContentSha256": "d1972f6a65fe5e3ea0f1fde6ad7ce0a92565cdf94e582292a3eb31a1f3adc0ae",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.quests"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 13,
+      "sourceId": "vic.econ.core",
+      "sourceName": "[模块]econ·经济与合成",
+      "sourceEntrySha256": "08801d18c33417149c8745ea8af07766140eaf2434791c7a2af9ee176baeb4b4",
+      "sourceContentSha256": "6292ffd67264533faab16840091b41e9c95596273bdc6e1caa893570e459d5fe",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.economy"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 14,
+      "sourceId": "vic.routine.core",
+      "sourceName": "[模块]routine·结算管线",
+      "sourceEntrySha256": "0d359e20d7cfc6047e177fe9304cef2cc0f1eed65770c0dfdcee2e8ddcb89e53",
+      "sourceContentSha256": "80289d8472d7a97b9ab4f602ced4294d9ef1ccb7af24e0127a09e31be1e9f13c",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.scheduler"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 15,
+      "sourceId": "vic.stat.core",
+      "sourceName": "[模块]stat·数值体系",
+      "sourceEntrySha256": "e9b60c3bbba417ec7ce9c5f81bbb191df98eacaeb930b8832c3a2e817d3a3bab",
+      "sourceContentSha256": "a7be355c6e503cb71d3415ac64106dad987f0dd28a1da886a6cb0732f495ff34",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.progression"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 16,
+      "sourceId": "vic.skill.core",
+      "sourceName": "[模块]skill·技能体系",
+      "sourceEntrySha256": "48c74bc9d384336034b7b93600acd5147a093049a429975cf5104816f94b6dc7",
+      "sourceContentSha256": "cfeefb4d4e01d5c4be00c0f51794f8f97a8712fd4c7e400b8571fc055b3d6cee",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.progression"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 17,
+      "sourceId": "vic.growth.core",
+      "sourceName": "[模块]growth·经验成长体系",
+      "sourceEntrySha256": "36adf77cbe321d1f66e17d3a376cb4df6aa1dab342afe65db01e8d1785d625a1",
+      "sourceContentSha256": "d3a11bfa280cb6e4103394296b0b9460a455316d6e0e1565fa77f4a8defbcfac",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.progression"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 18,
+      "sourceId": "vic.init.core",
+      "sourceName": "[模块]state·初始化生成轮",
+      "sourceEntrySha256": "c26efca4ac8830c81ae9fd7de7209382dd26ce04cefb5bc49554372a1c9db1ec",
+      "sourceContentSha256": "7e9470fd607845d143be3bf6ab41e7f80a2fcb0312515911f0650c9beb262a34",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.bootstrap"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 19,
+      "sourceId": "vic.story.core",
+      "sourceName": "[模块]story·故事层调度核",
+      "sourceEntrySha256": "5caa8014816f8543afc7997b44a20cd357d9c2fab56e6e1b2b761f2ecea46cec",
+      "sourceContentSha256": "4e786ca2b259bf6ecc6691664f4fcfd5d8183e628eac3d8c9cf5e35fae74843e",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.generation",
+        "aster.function.protocol-coordinator"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 20,
+      "sourceId": "vic.inject.core",
+      "sourceName": "[模块]inject·标记区块注入核",
+      "sourceEntrySha256": "44d48788b3728dbd0a65f0729a5c288eafc00a9de8cff0f1401a4a297ffdf1ef",
+      "sourceContentSha256": "9f9618843d5ab660d7a6175489f8cf67f27c4df207370bef6a9421c77030628d",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.snapshot-providers",
+        "aster.function.narrative-frame"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·功能",
+      "sourceIndex": 21,
+      "sourceId": "vic.gen.corpus",
+      "sourceName": "[模块]生成协议语料注册中心",
+      "sourceEntrySha256": "a3ad7e7f4a46a87ea3394150f009ecd02895ce03be753de937bbc5f0fbfadd40",
+      "sourceContentSha256": "b055e96f4ad76fddfc54eba5492e4ea449cd3e84e5d033d0a7a85667aa1990f0",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.function.generation"
+      ],
+      "reason": "公开能力保留，旧全局写法改为注册表、plan 与事务。",
+      "continuityEvidence": [
+        "verify-function-f1f2.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 1,
+      "sourceId": "vic.codex.types",
+      "sourceName": "[模块]codex·图鉴类型注册中心",
+      "sourceEntrySha256": "df9ac795a3169b129b0f96ba804451b6219ae7a550183c1fbbe64f93c5bcbcc0",
+      "sourceContentSha256": "7b5f6165f48e890bedce47b19a3d85fd0a89703b9f03f711920bf141df753fd1",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.contracts",
+        "aster.repository.codec",
+        "aster.repository.catalog",
+        "aster.repository.selectors"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 2,
+      "sourceId": "vic.codex.assets",
+      "sourceName": "[模块]codex·多媒体注册中心",
+      "sourceEntrySha256": "557db4be01bc0df98854a5b4d9ccc6f13d68b7a8b2a29a79f35d86a5fd6e04e5",
+      "sourceContentSha256": "03fc6842ea4fd87f2c586c170ec4f1a90ec2a11715d3a7f5a6642c8e21043a97",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.resources",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 3,
+      "sourceId": "vic.codex.core",
+      "sourceName": "[模块]codex·图鉴记录注册中心",
+      "sourceEntrySha256": "5303dd3a6e7807faa58ca3f82eabab577d6a5e70a7b65a2280b5233fb3710562",
+      "sourceContentSha256": "131774b62ad9fb0e1ad659b57399ce9cc1968a6f231ab9fe97873cfc5c19bc26",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.contracts",
+        "aster.repository.codec",
+        "aster.repository.catalog",
+        "aster.repository.selectors"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 4,
+      "sourceId": "vic.codex.src-book",
+      "sourceName": "[模块]codex·静态源（世界资料书）",
+      "sourceEntrySha256": "6071077d077e9c136dc1c2886985fcb5a9fc3926cfa95bc510a4e92bca590f08",
+      "sourceContentSha256": "5f60529becf00f99dad3d5ef0bec6f2ce504a3aa89a2e081003eb4b0c2717b0b",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.codec",
+        "aster.repository.project",
+        "aster.repository.save"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 5,
+      "sourceId": "vic.codex.src-memo",
+      "sourceName": "[模块]codex·记忆源（记忆书）",
+      "sourceEntrySha256": "48bf278b4a2bb2148b43a475265acc543385e5f3d0e6c7560ba8da5ee0d0a619",
+      "sourceContentSha256": "9b60f0bc02aed0ddcf17950bee87c3ff7b6602d66c322025e2d4738ab0c2bad2",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.codec",
+        "aster.repository.project",
+        "aster.repository.save"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 6,
+      "sourceId": "vic.codex.cards",
+      "sourceName": "[模块]codex·样式面板渲染中心",
+      "sourceEntrySha256": "8af7d007150301535996cb0a86811ad4beb8f7f67b526edf2eee040f71b95b38",
+      "sourceContentSha256": "de193396ccce47dded35183e34abf9755eed05d9850c03f52f9837aaa98c979c",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 7,
+      "sourceId": "vic.codex.tooltip",
+      "sourceName": "[模块]codex·词条悬浮卡",
+      "sourceEntrySha256": "21d481afc714ccb05d394ec120dd81a8b52e9cf48f69e974818f234b4ddcfcb4",
+      "sourceContentSha256": "25f72860c549c2b1a734c4f2d769b16bde826b955aadf377fbd1825b4fc7c7cb",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 8,
+      "sourceId": "vic.codex.decorate",
+      "sourceName": "[模块]codex·正文词条装饰",
+      "sourceEntrySha256": "53e12e025e212ce4a2a1d247a4a8cf949d47685c351dd8eb4aa9e1c8daf8cbfb",
+      "sourceContentSha256": "4ad32752930d827514021de3423fb17506ea5c8a481111669a1419247164b02e",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 9,
+      "sourceId": "vic.codex.panel",
+      "sourceName": "[模块]codex·图鉴面板",
+      "sourceEntrySha256": "036df350dda364fd8728c0df6d7162e79d854698a0e0cc31af4402c07346b96f",
+      "sourceContentSha256": "394fe989a766a4bbda4c7043bd7eb1c9adbe72bf5e1ba4f72e06e660295a8297",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 10,
+      "sourceId": "vic.codex.chara-traits",
+      "sourceName": "[模块]codex·角色条目互绑",
+      "sourceEntrySha256": "627141dda9c23320bab4df872b5eea3985f335889d443b0f6826f31c999b7710",
+      "sourceContentSha256": "a9499b769c5b1254c628c0c38fb3b4a578e0152af9e8622242be46dc44dc81f2",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 11,
+      "sourceId": "vic.codex.cards.world",
+      "sourceName": "[模块]codex·卡片渲染器·世界",
+      "sourceEntrySha256": "652b77efc2a61f644b61e16d41ae156e96943a5bffc90ba8ffb1ef76919d5403",
+      "sourceContentSha256": "b8b8c413248c0489a7a48e362d7d4510403b7070e1c1d58a54b19856687b5cd3",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 12,
+      "sourceId": "vic.codex.cards.geo",
+      "sourceName": "[模块]codex·卡片渲染器·地理",
+      "sourceEntrySha256": "5e8491fd429f85584a81c5143cbcd0bfcf861f86ef29d80e21fc61a216d445f0",
+      "sourceContentSha256": "46b338fa2c374d949e38ad7ded4e9a0706743167c3c026b91323f228ae4ffee8",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 13,
+      "sourceId": "vic.codex.cards.faction",
+      "sourceName": "[模块]codex·卡片渲染器·势力",
+      "sourceEntrySha256": "c5286a8ae8367b126d1661cedc42983418fdbe9685e68a6c05423edea8251abb",
+      "sourceContentSha256": "2edbf21154d6b4d0724cd7e4132205ca4282dee16087e76637fe7df6b0144baa",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 14,
+      "sourceId": "vic.codex.cards.chara",
+      "sourceName": "[模块]codex·卡片渲染器·角色",
+      "sourceEntrySha256": "365a2d3baedbe29442d95ced9555652e6a295e0dd7b7ef76a8cb02d0126ff334",
+      "sourceContentSha256": "79cf04d21dc306a3b7eb2dba33e9b7cde13a3bc8bc1f39d0f89b699a1fb91a76",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 15,
+      "sourceId": "vic.codex.cards.item",
+      "sourceName": "[模块]codex·卡片渲染器·物品",
+      "sourceEntrySha256": "7a477ec9aacede29b91eb6c90bed012ce0b9c2c0721ddd66c4ab9eff61d9f02a",
+      "sourceContentSha256": "dde5e8643a7a1a9009d92de86dc14463e365650ce6792e440fa772ab1b749929",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 16,
+      "sourceId": "vic.codex.cards.power",
+      "sourceName": "[模块]codex·卡片渲染器·能力",
+      "sourceEntrySha256": "d3112c2f588c9d0c910ece47a4bfca27327557a03e43a5f22120cc5a1fcd4f9f",
+      "sourceContentSha256": "5e8ee86f3ac45532bc4acf3d713df24d049c990050257d5b53915cbc5a164fbb",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 17,
+      "sourceId": "vic.codex.cards.story",
+      "sourceName": "[模块]codex·卡片渲染器·故事",
+      "sourceEntrySha256": "392a74d0caca764b002c9503070891441c0489782fdca8ed982cda7e9d4565b5",
+      "sourceContentSha256": "102c441b396f3a6df8fd3fe984d04908850b1a46b9764fc8f23595c67e08b6f5",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 18,
+      "sourceId": "vic.codex.cards.rule",
+      "sourceName": "[模块]codex·卡片渲染器·规则",
+      "sourceEntrySha256": "22a77c6ec2ffd3a3c65d20a997a7dd16c977b1e98602400ee029d731d4a7a2b6",
+      "sourceContentSha256": "e9fbc9c49a6e1eacb3d0deb71aafb85c9032ae710559b733b9c5e42c01c9422f",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 19,
+      "sourceId": "vic.codex.cards.other",
+      "sourceName": "[模块]codex·卡片渲染器·其他",
+      "sourceEntrySha256": "a7d746a73e19a8f08d0bf1802d278a7300021000388648ee70be82ccb964d4fd",
+      "sourceContentSha256": "d50f837a564c0aae8c361659c52f1c53550003ff7e00cfeaaa53dc492f3f131c",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 20,
+      "sourceId": "vic.codex.timeline",
+      "sourceName": "[模块]codex·记忆时间线视图",
+      "sourceEntrySha256": "400edb87707bb4bf5e0a98d3712e6f82ab921566289cc1517aa1a3d139bf2a0f",
+      "sourceContentSha256": "af263265af40b3abbd8f2db2ba40ead038a270fef59bb7c6461852f4e468c722",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 21,
+      "sourceId": "vic.codex.gridmap",
+      "sourceName": "[模块]codex·格点地图视图",
+      "sourceEntrySha256": "174daf00703180e59f5714a6aeaa0bc6853ae6e6aa6330fe6e6c1124104281f9",
+      "sourceContentSha256": "fbfeffa6157ac64dfa67f848ca109290553087d83b97e6770143551ccb0be6ba",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.skin.repository-cards",
+        "aster.skin.social-media-vn"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 22,
+      "sourceId": "vic.memory.core",
+      "sourceName": "[模块]memory·记忆注册中心",
+      "sourceEntrySha256": "f1441ccf9f3c0c876651ff398e3967a566e049a3aaa401db0f37cffd7864384c",
+      "sourceContentSha256": "368621fd89298490c605a702a3bb2f49881b26f00b6cefecc7d5cf4952cae046",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.save",
+        "aster.repository.selectors",
+        "aster.function.memory-events"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 23,
+      "sourceId": "vic.memlayer.core",
+      "sourceName": "[模块]memlayer·记忆层档案",
+      "sourceEntrySha256": "5f47efa8c9df1e47d1c10925be41e732262c70d2626064644fde62c64bd7b496",
+      "sourceContentSha256": "0d783fe7c0688c0ac1c866e8a5ea69e005f8166ba993ef4b8ce1b5a45ed0a3ab",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.save",
+        "aster.repository.selectors",
+        "aster.function.memory-events"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 24,
+      "sourceId": "vic.snap.feed.mem",
+      "sourceName": "[模块]snap·供给端·记忆文本",
+      "sourceEntrySha256": "f760c1adc0a503ce5f428e0e96f00f31806c9c3fa112003f6b6c9c8ff3bf5a11",
+      "sourceContentSha256": "012fdca4d60b71bb380c547acf67d132b28c830620c574f57ab9e37dc4530f2f",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 25,
+      "sourceId": "vic.snap.feed.world",
+      "sourceName": "[模块]snap·供给端·世界文本",
+      "sourceEntrySha256": "a605ee5815959714d62e1b79b025a5b0994bcd407e63c7d29f272d9ac3aa5735",
+      "sourceContentSha256": "ded881ea51180b57598d7d0161d3af697012baa0c98ca82c572200959b73c09d",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 26,
+      "sourceId": "vic.snap.feed.player",
+      "sourceName": "[模块]snap·供给端·玩家面板",
+      "sourceEntrySha256": "ba8135ac7d403df57437b18892926c4bec5295fabd35211268a0c4e3d192125a",
+      "sourceContentSha256": "03fd28fe03fbd15d0da5bbb711ff6a5beff3854f657237b17bedf2488fccccd8",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 27,
+      "sourceId": "vic.snap.feed.party",
+      "sourceName": "[模块]snap·供给端·在场与社交",
+      "sourceEntrySha256": "45cfb72b402e8166294001c3778480f07b4627c7a0e6c2f936abad8c440beefd",
+      "sourceContentSha256": "db77f20b9a2b89b48307288ce5ea7aab5258e7f6ab3d95b6499806154d98d795",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 28,
+      "sourceId": "vic.snap.feed.inv",
+      "sourceName": "[模块]snap·供给端·背包装备货币",
+      "sourceEntrySha256": "a9b228e652c5b6a121f507ebd160368c9ea06dd9973948864c7ba49652ed5d59",
+      "sourceContentSha256": "de1efdb5e4f4bfcea038982b2600fca3f009737c34562d02fe81bf4731451c2d",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 29,
+      "sourceId": "vic.snap.feed.quest",
+      "sourceName": "[模块]snap·供给端·任务成就",
+      "sourceEntrySha256": "7eae6a82e05aa7bb10e24c68eb2f115d653fc4c4e7670ff5ab9324312f510924",
+      "sourceContentSha256": "1f41872989aa3867a860214e537b6f8ef7f379db8ba8b9dee60a09b2e150ad1d",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 30,
+      "sourceId": "vic.snap.feed.event",
+      "sourceName": "[模块]snap·供给端·事件大事记",
+      "sourceEntrySha256": "7e66046d81e17eca5941fb036ab98b414179d6680aa4b95aeb67b5d4710c0f0e",
+      "sourceContentSha256": "b7bcb2876bb511409c8dd90baf71904ae14edd4b995a1819f8a614b152756f76",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 31,
+      "sourceId": "vic.snap.feed.time",
+      "sourceName": "[模块]snap·供给端·时间历法天象",
+      "sourceEntrySha256": "4b1aebff19eca49b08643ebb672fa0309c772b864c60deda043e261cdf014340",
+      "sourceContentSha256": "3147c98c60f1fcb20cfe6e8e7ee5802b39df384048857c9b4e9a085bfd3c1cde",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 32,
+      "sourceId": "vic.snap.feed.scene",
+      "sourceName": "[模块]snap·供给端·场景地理",
+      "sourceEntrySha256": "84d334fd9d0d72a83626601cb9c1b3fbdb1cb2a5c3dc1ebcc5feb107c32b5159",
+      "sourceContentSha256": "b2edce10c24fcc21e780e6f994dbf8de7989ac76051f469b314b059523ae7293",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 33,
+      "sourceId": "vic.snap.feed.skill",
+      "sourceName": "[模块]snap·供给端·已学能力",
+      "sourceEntrySha256": "f384152f7efd7d13411ea171f143d4b76dab524470d8e0bd4f4f68f5bd73fc65",
+      "sourceContentSha256": "8738780429400886db6e3ecf4265e4796de98c684ab90df42f260daeaf117450",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·图鉴",
+      "sourceIndex": 34,
+      "sourceId": "vic.snap.feed.rumor",
+      "sourceName": "[模块]snap·供给端·流言个人近事",
+      "sourceEntrySha256": "8defa4a50262bb9939cddefe7594e8e51719d9682e8f7c2bd2439c1f5c14091a",
+      "sourceContentSha256": "cd77e83b264fb2ca6b6847a0fb0f19c4855f0fe4957e1dad039367249e33a11c",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.snapshot-providers"
+      ],
+      "reason": "真值进入 project/save repository；表现层由安全读模型承接。",
+      "continuityEvidence": [
+        "verify-codex-repositories.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 1,
+      "sourceId": "vic.core.theme",
+      "sourceName": "[模块]core·主题与皮肤沉降",
+      "sourceEntrySha256": "eeef8a4c092a0226e2adb8fe84a55df695fbf4c0237924775543adecdb03230d",
+      "sourceContentSha256": "6f241f2038a554d627cd00c04cf0ade67d616c8d71b3489e629b5fc1b23a5e58",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.appearance",
+        "aster.system.preferences",
+        "aster.skin.tokens-themes",
+        "aster.skin.ambient-enhancers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 2,
+      "sourceId": "vic.theme.packs",
+      "sourceName": "[模块]主题包·冷色科技",
+      "sourceEntrySha256": "14a898719e118abce2624292778c5bc888a89f69bbfed2292fffa520c1ec4baf",
+      "sourceContentSha256": "5498f6780f7ce3d7a2c24536d0850d4a0569254ae02a6ca60f8e7ff4f508567f",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.appearance",
+        "aster.system.preferences",
+        "aster.skin.tokens-themes",
+        "aster.skin.ambient-enhancers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 3,
+      "sourceId": "vic.skin.bgfx",
+      "sourceName": "[模块]底层·全局背景特效",
+      "sourceEntrySha256": "39e545e1f6165aea69972e16469a665e143e5990fdc9f4fe2af560145062824e",
+      "sourceContentSha256": "5d12c4348bf2f6b0706f2745154136f45d045adc2e28e9375caef358a274d785",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.appearance",
+        "aster.system.preferences",
+        "aster.skin.tokens-themes",
+        "aster.skin.ambient-enhancers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 4,
+      "sourceId": "vic.skin.options",
+      "sourceName": "[模块]皮肤槽位·内置声明",
+      "sourceEntrySha256": "9d8b84f97b017a82a8772554adfeaded91d3cf55d7a03332a5a0050ebd0955e7",
+      "sourceContentSha256": "efba992299031a8763013d0ad4e1711356019dac3b0953e777072ca4af013c66",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.appearance",
+        "aster.system.preferences",
+        "aster.skin.tokens-themes",
+        "aster.skin.ambient-enhancers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 5,
+      "sourceId": "vic.typo.pack",
+      "sourceName": "[模块]排版包·十一记号",
+      "sourceEntrySha256": "4237cd60ecf127969ee78cf7fd75db1f3dedc80febed7b0b52fc7dee2b27262b",
+      "sourceContentSha256": "0e5facd0fa665e1b6ddb74a16722aebd759343b44b1d772df7c056103f2b55a2",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 6,
+      "sourceId": "vic.content.base",
+      "sourceName": "[模块]内容内核·工具箱与区块解析器",
+      "sourceEntrySha256": "afa23b6cbfe4d3ce68f2a4639688aa917e65ab15561b5db58c45632c1edcdd5f",
+      "sourceContentSha256": "222bf668080ecf41f1eb19e18c59d8a996944e9135f58bad1c74bd8dc38024d4",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 7,
+      "sourceId": "vic.mark.code",
+      "sourceName": "[模块]标记·代码",
+      "sourceEntrySha256": "dea87a90346c5acddf79aeb8b6770bc75e58b13da421b26afd53f084c21b8c1b",
+      "sourceContentSha256": "d2bd0d385a7ddebbf3267eb2f6998885291f34c05c17628259a4d36f60a7ebd8",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 8,
+      "sourceId": "vic.mark.title",
+      "sourceName": "[模块]标记·标题",
+      "sourceEntrySha256": "874d3ced2fb81428af7101852134995d97361bb930bf50d19db71ae569c147e0",
+      "sourceContentSha256": "bd0fa6afde26135abeb7b3498a42b16fbd4fc5b5330df9ba450a568f17f32b0b",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 9,
+      "sourceId": "vic.mark.event",
+      "sourceName": "[模块]标记·事件",
+      "sourceEntrySha256": "7ec388b9d2968b636b1b4853598f96396cb460f1bda9c6bf48eefe71c997dac2",
+      "sourceContentSha256": "be74b952aa37917b6ead8ce3ce8fd2bb240c8683a17f523507cc150eb70e9b1b",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 10,
+      "sourceId": "vic.mark.message",
+      "sourceName": "[模块]标记·消息",
+      "sourceEntrySha256": "8ce494a350b89dae87ff2dc176773561559f00458f805b4409e3bc34f5d84fc1",
+      "sourceContentSha256": "63627376b64c9cab3c4318d50f73207b07065b0d79656a5dc608ada722008336",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 11,
+      "sourceId": "vic.mark.mind",
+      "sourceName": "[模块]标记·内心",
+      "sourceEntrySha256": "e5574801e8b36b627fbd636486bbabe30204ea8394bf19c0f36a61d73a91d573",
+      "sourceContentSha256": "1578f13f247690d49d017d159d367edaf2b057f87019625bd86697556a0fadd4",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 12,
+      "sourceId": "vic.mark.letter",
+      "sourceName": "[模块]标记·信笺",
+      "sourceEntrySha256": "ed3ebb1210fc759819fd675f208451f470589e83a9916b00cb40320d4d4da4ab",
+      "sourceContentSha256": "0ff1f22f73213ea8de9c5b742eeea4e9ec1e6e80053125a497d7992699726071",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 13,
+      "sourceId": "vic.mark.secret",
+      "sourceName": "[模块]标记·密档",
+      "sourceEntrySha256": "677018497d3b476295b42f2360d496af2e997564f8a6002b48ce1e69adc4cdc8",
+      "sourceContentSha256": "a101a47ee2d2e23be836a1002c2e242efe1a2ea707a267470e2d33e8b0fc9c7b",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 14,
+      "sourceId": "vic.mark.terminal",
+      "sourceName": "[模块]标记·终端",
+      "sourceEntrySha256": "aa8342967457add503254507b403e2fb1014b602be9126543ca12ced21254a7e",
+      "sourceContentSha256": "2076e4390b65f150863e44b6df6f5a3b17c1ee63d598c45acc8f6f9ffcac7e98",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 15,
+      "sourceId": "vic.mark.broadcast",
+      "sourceName": "[模块]标记·播报",
+      "sourceEntrySha256": "b52d5154c4ab6be60f0efa8594c98d7623a47c4f0e5612c53830de0cff376c22",
+      "sourceContentSha256": "9898367e4a4042d5d16534a5ff2e4d9bb306816a2c65e1e465d5fd4e9038aea2",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 16,
+      "sourceId": "vic.mark.narration",
+      "sourceName": "[模块]标记·旁白",
+      "sourceEntrySha256": "ed5dd3b00c0ea8f541cc5ae03cdbc1da5d03c9247390e92e7793ea81936ad04b",
+      "sourceContentSha256": "5c6b79839b8f99c1e24ca550fcc7f5e70cb6b44252d14772cebcbf3ed61ddfe6",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 17,
+      "sourceId": "vic.mark.quote",
+      "sourceName": "[模块]标记·引文",
+      "sourceEntrySha256": "d36b810a489d2c388d2707f1913e8f9083778c6fb5cd37f74f579b60fdf49739",
+      "sourceContentSha256": "2ede7406775fcdf9b4c7b3885cd8b50d01c192a4d0bf5763de7aa7c1ad6e847e",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 18,
+      "sourceId": "vic.mark.flashback",
+      "sourceName": "[模块]标记·回忆",
+      "sourceEntrySha256": "0922756cea2ad851ca1451a6600d7ed4d06fb6af9d7428753c82208022328998",
+      "sourceContentSha256": "8420012d8dde7d9207d66de4e53d62a30422f7d401389ebbc3b6dbbfb3eed3a2",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 19,
+      "sourceId": "vic.mark.dream",
+      "sourceName": "[模块]标记·梦境",
+      "sourceEntrySha256": "3f5c8c84c7a6bad9d38471d56124e5135ef97cd134353834d5f10fb6586bee3c",
+      "sourceContentSha256": "2df9bb76a8e94594b4c86611f4b0c594ad55481c96218284340b28d9adad8463",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 20,
+      "sourceId": "vic.mark.system",
+      "sourceName": "[模块]标记·系统",
+      "sourceEntrySha256": "2cfd947cdfd00e223c1c1d3562bcc9e5cd49767fbc3c492d0e94205aa95a5533",
+      "sourceContentSha256": "e81775d5ea2d30871bfdbda9c225a601ec794ff8e6bb26eb178cb1b9c549c3df",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 21,
+      "sourceId": "vic.mark.archive",
+      "sourceName": "[模块]标记·档案",
+      "sourceEntrySha256": "122bc58d110b67d0476be6c23099c18a42b746bf8256d239bfd8a8d02f1ed4c6",
+      "sourceContentSha256": "c5c4b5b480fa035321e9bdea6b1763f369fc5950198c0adf3d49b37026d79757",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 22,
+      "sourceId": "vic.mark.poem",
+      "sourceName": "[模块]标记·诗歌",
+      "sourceEntrySha256": "b25025a48574387375848af49df3711188f5d5b3396833a89ee520ed6cff42cc",
+      "sourceContentSha256": "8712035ab8598a27ea4c1b3323fdaf2e464af838c6e1f891e1db414d99c236a8",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 23,
+      "sourceId": "vic.mark.scan",
+      "sourceName": "[模块]标记·鉴定",
+      "sourceEntrySha256": "3bd579f44d1a95859c5f056b5eb2e99c7e0bceb2dd9788d895645572b1b0a076",
+      "sourceContentSha256": "b0e06541d5c85c56b883d5842086f34a385f389eac4adbb855c3432aba74db18",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 24,
+      "sourceId": "vic.mark.timeline",
+      "sourceName": "[模块]标记·时间轴",
+      "sourceEntrySha256": "740272925fee0d189ae50c5f92aac98965b1f6ce2e1e9bdf2e838242745225b0",
+      "sourceContentSha256": "67807fd66bc7fbc98d5dfb7a277d68e1223a8c11c51ba996a58ca8f7b3ddd779",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 25,
+      "sourceId": "vic.mark.scene",
+      "sourceName": "[模块]标记·场景",
+      "sourceEntrySha256": "bad9a95e2c5aa6bba0cf0d4467d5ebd4ab61d3b361ec6adbb0883a1e9a1911f3",
+      "sourceContentSha256": "2e412d5e782b29dd623c693a2dc121e7a5f1472f63f7da037de5c7380c5a6fab",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 26,
+      "sourceId": "vic.mark.loot",
+      "sourceName": "[模块]标记·收获",
+      "sourceEntrySha256": "2afb56ef9c7b8547cf50a5c0d11062c0ef43ce313abbc9d5d7f32b7ba89f81dd",
+      "sourceContentSha256": "18baab985523155381f133e9f46b1b6d02232206f885e44f7f15257fb03ce938",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 27,
+      "sourceId": "vic.mark.lose",
+      "sourceName": "[模块]标记·失去",
+      "sourceEntrySha256": "2e926eeccadea01674d9d05b0b8a29cb58347398617a08e1e876d73fb3fdf9ba",
+      "sourceContentSha256": "0cc01d427252b685e37ecfc7417a6553c172111d0041b9f083a83751e88e4866",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 28,
+      "sourceId": "vic.mark.sticky",
+      "sourceName": "[模块]标记·便签",
+      "sourceEntrySha256": "96111fe51311f8ecd31e1cfe835aec932ac2d6f4c30cc68b6192e22249728b19",
+      "sourceContentSha256": "3d7b828b2651160acb73d4cc6e0390dde835b26d49acffe1d5d22f1bf419c773",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 29,
+      "sourceId": "vic.mark.warn",
+      "sourceName": "[模块]标记·警告",
+      "sourceEntrySha256": "9759666ef1e07ed122345ce107d011430df7eb2b2c5e507b05cb3c1ff1514da4",
+      "sourceContentSha256": "4e7744e0aff97c7b3168b20d75eb9efcac78ce9885641e4221803e095f54b3d4",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 30,
+      "sourceId": "vic.mark.footnote",
+      "sourceName": "[模块]标记·注脚",
+      "sourceEntrySha256": "f9a6f5bcb33ab8149c08183c42538209a0fe7a638bc249583d03d14cd0c96879",
+      "sourceContentSha256": "d834975a8e3833588ab3d542c32f2f6fa192fc3bde6be51e0708c64a3c6327a5",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 31,
+      "sourceId": "vic.mark.dice",
+      "sourceName": "[模块]标记·骰子",
+      "sourceEntrySha256": "fa29b08101ed7b92e4660a8cc216ee4fbbf4670c692c78871c989d1ec847ef1c",
+      "sourceContentSha256": "20103863672c61b3292bbc1bb1a29643763f9caf5642524d51f74d5717b5cf50",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 32,
+      "sourceId": "vic.block.guard",
+      "sourceName": "[模块]区块·净化引擎",
+      "sourceEntrySha256": "5f1f23854a31bae7b0f37227f35826c275d71b5c8f1729846b0ca36eca93f123",
+      "sourceContentSha256": "f65d518a5a164918c6ead8f7e0d3587141cd60336b1d6971018dabfc317df3dc",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 33,
+      "sourceId": "vic.block.head",
+      "sourceName": "[模块]区块·抬头（运行清单）",
+      "sourceEntrySha256": "ea976dfbdcb16bef792332d36b6b5bdc7f6003856132bd0011f444e75039bc79",
+      "sourceContentSha256": "ad5730d420f36e4e1b3b9e24258e8ca1fc35b4bc40b5839bc8fc8ba6052be300",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 34,
+      "sourceId": "vic.block.de",
+      "sourceName": "[模块]区块·审计",
+      "sourceEntrySha256": "28dd006c4d5db3984bf6c7ba82f3c9bcdfc11818757405a3148f0ed018529352",
+      "sourceContentSha256": "609bc9c13c5dedba4e825978229d57ed744b8e1bed4a8269f909306374fea284",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 35,
+      "sourceId": "vic.block.viupdate",
+      "sourceName": "[模块]区块·落账",
+      "sourceEntrySha256": "a916d9fa2fb5c72c00a56adbd49b04466f26ed150292c46795d1daee1f388be9",
+      "sourceContentSha256": "ae09e2f5aea748b68125fc74474a084b1726184ece68dec986ecea41f8296bff",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 36,
+      "sourceId": "vic.block.note",
+      "sourceName": "[模块]区块·待办（含待办核心）",
+      "sourceEntrySha256": "35f03b06b223239672cdc86fc56a0bcbe212315959a413491afcd4c195d87349",
+      "sourceContentSha256": "32600f54bb255c3fb92b9f0678f47260ce0022888a71aeb58d6d036fa2a17218",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 37,
+      "sourceId": "vic.block.copy",
+      "sourceName": "[模块]区块·复制容器",
+      "sourceEntrySha256": "59f5b20c472c353eb8a5ad0787b402fc73e7aaa9a8e314d173de9025cfa92b03",
+      "sourceContentSha256": "82fc41f152c25f47a0796085c8949805626fe2a3a2acade78b19545fdcb8b1c5",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 38,
+      "sourceId": "vic.block.ext",
+      "sourceName": "[模块]区块·扩展外壳",
+      "sourceEntrySha256": "4eaac815e762580f081d0a521dc641e963f1ceb5caaa1cd315d7ae04d7f36596",
+      "sourceContentSha256": "fd7f0bba14ef849273ab59c119b03ace5471a8ddd2429cebf831614631db8237",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 39,
+      "sourceId": "vic.block.act",
+      "sourceName": "[模块]区块·选择栏",
+      "sourceEntrySha256": "567860c9c56b2f38457d68a78648001213424e860d268c47007789ecc10e126b",
+      "sourceContentSha256": "6b94298fe4ca2a0efa7f0a90633ab8e6c87830bd3e11b1d96988f730a54c390d",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 40,
+      "sourceId": "vic.ext.dm",
+      "sourceName": "[模块]扩展·弹幕",
+      "sourceEntrySha256": "3ee6b578c7032a132cfcd4a6cb8540c517a8d39906a4f708d6c54c087d9bf0d7",
+      "sourceContentSha256": "6808357e7c1212de5de8dda7f297eeb240a49d9a86b145957ee116817fe89ff7",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 41,
+      "sourceId": "vic.ext.rumor",
+      "sourceName": "[模块]扩展·风闻",
+      "sourceEntrySha256": "e488b66d749dc98e3b5eb9ac6cac115c00121367fb75d91f7bccb8dc63bf66cb",
+      "sourceContentSha256": "0e86181902f893a62f837cccf03f870ca68e030fab1919bc3f50821671969919",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 42,
+      "sourceId": "vic.ext.notice",
+      "sourceName": "[模块]扩展·公告",
+      "sourceEntrySha256": "aa219880d9df6487af5e87f7136b8720f60892ccce3b1b3a71a04bbf82516d93",
+      "sourceContentSha256": "a79685933db0b35a07ec9eb9b07c4050d3a55ff23951b56142dd95448b0c1988",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 43,
+      "sourceId": "vic.ext.settle",
+      "sourceName": "[模块]扩展·结算区",
+      "sourceEntrySha256": "e4478fcf874e71ad969e2ae87b5f83c4c159a3c7a3a8c520d0267e75552235cb",
+      "sourceContentSha256": "e34b99f50327758481d178b91fec3494bdf53aeaac5b8e6c9736838c5af13ea6",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 44,
+      "sourceId": "vic.ext.echo",
+      "sourceName": "[模块]扩展·近日留言回读",
+      "sourceEntrySha256": "735b5415e03b21025cde5a8d67e5cad159d555280ddcae62ac7abe3f5a850eae",
+      "sourceContentSha256": "ce3fada392e850c38ae1401f572d164c8e0eb3fdf59933c8d47b0c7ad173fae3",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 45,
+      "sourceId": "vic.ext.theater",
+      "sourceName": "[模块]扩展·小剧场",
+      "sourceEntrySha256": "7653968aec4ea0313ffa9b1e1bd4f3ccec12e4e33fb7d884d3a774cbbe28b4b1",
+      "sourceContentSha256": "e725e53bec2742b83b64ff927707ddcc8609f1befe8ae580a6b261c8425f77a3",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 46,
+      "sourceId": "vic.ext.forum",
+      "sourceName": "[模块]扩展·论坛",
+      "sourceEntrySha256": "942ab989e4e34877ecd61e09f70c75c1101d398f435cdeddb9c9bdd13d9ece3b",
+      "sourceContentSha256": "d9d307dd2fc4c73fe4abc7fb01222249e35a75dbdd46a811922fceb6f84349e3",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 47,
+      "sourceId": "vic.ext.source",
+      "sourceName": "[模块]扩展·源头读取",
+      "sourceEntrySha256": "f4802d5b660c83a502ef808e05808b4ad86d89b1ccd727fc0c8b46a538c16d2c",
+      "sourceContentSha256": "a2780a3e7afc84d1db4a434dba344d2c91766096990bea3d94cadd80c241dc89",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.markers-blocks",
+        "aster.system.message-renderer",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 48,
+      "sourceId": "vic.action.theme",
+      "sourceName": "[模块]动作·主题美化",
+      "sourceEntrySha256": "40fc358a709ae6a09bd84fd595a708abd6ccfdb49ec83176cd5845efd82174d1",
+      "sourceContentSha256": "19f96056a1399f582f6943adfe10353e2eeb3e6cdb6bfffd29f38a222c6e63de",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.appearance",
+        "aster.system.preferences",
+        "aster.skin.tokens-themes",
+        "aster.skin.ambient-enhancers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 49,
+      "sourceId": "vic.enhancer.fx",
+      "sourceName": "[模块]增强器·点击特效与桌宠",
+      "sourceEntrySha256": "8803d809debac688c7277df044d8786f60739a5f6fce3310a0751448560c3275",
+      "sourceContentSha256": "f3a5b43b470b1bbbd6d211f9145c4b8a8262065427a64df20b247717b36dd4af",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.appearance",
+        "aster.system.preferences",
+        "aster.skin.tokens-themes",
+        "aster.skin.ambient-enhancers"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 50,
+      "sourceId": "vic.statusbar.ui",
+      "sourceName": "[模块]ui·顶部状态栏（北斗七星）",
+      "sourceEntrySha256": "db4deb3cb8a861fb0deebbe2234e935b2fcad24b5c986d6dbae4f3df161440b1",
+      "sourceContentSha256": "e53ee9b97ff7dc65f715dadbf6563f8d524efa6d3d1b8eedfb421069c9ed1478",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.dashboard-review"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 51,
+      "sourceId": "vic.dash.ui",
+      "sourceName": "[模块]ui·仪表盘（扇形轨道 HUD）",
+      "sourceEntrySha256": "06db698a9b6e41961004c450d06b2aa654d051904cad732434aade6ed82319c5",
+      "sourceContentSha256": "699c200f35b12d09f5cc4f380191ab56ff440cb60b5fe7bc4619037880fc93aa",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.dashboard-review"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 52,
+      "sourceId": "vic.enhancer.bgm",
+      "sourceName": "[模块]增强器·背景音乐",
+      "sourceEntrySha256": "cf43880960f51738f2087ef8779c332ec911397d8b64fadd2e7a0f01c8ca41d9",
+      "sourceContentSha256": "37aeba722637a4272081b96e80f7a0275b37d7ea165910a5969e01a8a617462f",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.social-media-apps",
+        "aster.repository.resources"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 53,
+      "sourceId": "vic.memo.keeper",
+      "sourceName": "[模块]memo·记忆守门（手动确认落账）",
+      "sourceEntrySha256": "9bda880771fbbc82ac09fd721a1e7e0943072ef36e0e81212f0873c7e9ec76d9",
+      "sourceContentSha256": "dd97af607f77c71c28f4813bfb7fe7805c55fd2b3096b6063627f7e9ce5f8b98",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.dashboard-review"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·系统",
+      "sourceIndex": 54,
+      "sourceId": "vic.skin.panel",
+      "sourceName": "[模块]主题面板",
+      "sourceEntrySha256": "c562591bf30b5856b3ef376e9603dd882178740737c77025b317f22d6eb62d7f",
+      "sourceContentSha256": "ea71c2779c2ed386354ddc3e8906d6f242cc3af9e0ce6bb1bde1cabf277d8ae4",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.mode-controls",
+        "aster.system.appearance"
+      ],
+      "reason": "系统行为与样式拆分，所有交互走 command/repository readback。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 1,
+      "sourceId": "vic.theme.default",
+      "sourceName": "[模块]默认主题 tokens",
+      "sourceEntrySha256": "7912811b203d63a42323861fde275f2f3582e067f9084f5073df38e07d9b8168",
+      "sourceContentSha256": "edb358c938c9e5b4b3b0b1d1f5562533a220a189f05309151138efa049405c91",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.tokens-themes",
+        "aster.system.appearance"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 2,
+      "sourceId": "artifact.font-pack",
+      "sourceName": "[资源清单]冷色科技字体包",
+      "sourceEntrySha256": "00134a3d54235b3a68aed76329655ccaf993db8e919d1c56d5a606cadbb5e1cd",
+      "sourceContentSha256": "e2475fb5f5c16dc6fb1a58eeee3f3605158a0f11a76543e112d17e0c9661a649",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.tokens-themes",
+        "aster.system.appearance"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 3,
+      "sourceId": "artifact.live2d-runtime",
+      "sourceName": "[资源清单]Live2D运行库",
+      "sourceEntrySha256": "eae594ab6b0efb46160904176f7df63413a1332d0d328ffbb527c373c09208e2",
+      "sourceContentSha256": "36557c8a999c3b6c8c6270b6293a095f3a8697d9f2af6254399ec52a11482960",
+      "legacyDisposition": "translated-safe-adapter",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.appearance",
+        "aster.skin.ambient-enhancers",
+        "aster.repository.resources"
+      ],
+      "reason": "不执行第三方动态脚本；可见宠物能力由 CSS 动画或已校验 image ResourceRef 安全承接。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 4,
+      "sourceId": "vic.skin.codex-base",
+      "sourceName": "[模块]图鉴·基础（结构）",
+      "sourceEntrySha256": "b976e3ab255c5b65c87e35b8c8f52d45a2c12cdda41f63d43ceb31f75eee751c",
+      "sourceContentSha256": "b3fd43ef0c3b67b5195ca641bf9e2b92de7be40db5c8c1ddb4186f45cd949106",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.repository-cards",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 5,
+      "sourceId": "vic.skin.codex-style",
+      "sourceName": "[模块]图鉴·样式（视觉）",
+      "sourceEntrySha256": "7a47170b1584fa5123b9c93d78ebf38fc90ad3085bc09d1c9d5c7c8479d7e760",
+      "sourceContentSha256": "fa478ce8d8329a0cc6ae9a2604ac1f46dae06ff10606675aec2bec1376c24a81",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.repository-cards",
+        "aster.system.social-media-apps"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 6,
+      "sourceId": "vic.skin.default-host",
+      "sourceName": "[模块]默认宿主皮肤",
+      "sourceEntrySha256": "7714fe794a52b14f3c4584573979107ab5fef87fb74455a5fa41a936936dc42a",
+      "sourceContentSha256": "e8af63abab0b20a6d8f00cfd06dc92a0ad69e0bafa70ef9a9c71df8d2b10caff",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.shell-forms",
+        "aster.skin.tokens-themes"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 7,
+      "sourceId": "vic.skin.underlay-ambient",
+      "sourceName": "[模块]底层·环境氛围",
+      "sourceEntrySha256": "8df21dc18fc2c682b3bb105a3b60177cb057a4123502dc439eae14812e36a5dc",
+      "sourceContentSha256": "1054c537ad5ddca887672efdbada0d8c6ceef97910881ccdc6b8e9c340e1dc2b",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.ambient-enhancers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 8,
+      "sourceId": "vic.skin.panel-forms",
+      "sourceName": "[模块]面板表单皮肤",
+      "sourceEntrySha256": "2e7217d1ed7011a37ec40fd075d40ae6eee675a3ad853f10b5eef825c66c1493",
+      "sourceContentSha256": "b8dbc4842a4d8463c4fd776f744be12adb52b48de52ebd9d8dd318066f89e136",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.shell-forms"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 9,
+      "sourceId": "vic.skin.default-content",
+      "sourceName": "[模块]默认内容皮肤",
+      "sourceEntrySha256": "894f1ad66b7d815b2e2fa63b8d5029f06ecfb2e7efb5373624120f5634d94006",
+      "sourceContentSha256": "701aa205493a08ba1cd767fb5a00c290a0a3cd9d9ea8003504049daa774ca087",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 10,
+      "sourceId": "vic.skin.block-head",
+      "sourceName": "[模块]区块·抬头（皮肤）",
+      "sourceEntrySha256": "93139f186f3fc2f82a6e468f38af218658c55b4390d2b5b232067f1508d7ec8f",
+      "sourceContentSha256": "204c3464f454a1e60e476535226ce9470223f4c1bfb74912d7fd14d2a04ca78b",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 11,
+      "sourceId": "vic.skin.block-audit",
+      "sourceName": "[模块]区块·审计（皮肤）",
+      "sourceEntrySha256": "7e119ddd29c827ba877341673b89409f661f52492ffd524e16dd5ea02d04210b",
+      "sourceContentSha256": "c87c8cce1a4b82996bd34251d18eb4fe12cfec8ef008c21cbf07bd6a4ccb5525",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 12,
+      "sourceId": "vic.skin.block-update",
+      "sourceName": "[模块]区块·落账（皮肤）",
+      "sourceEntrySha256": "e28ef63cb9513d2cc10ee870552714e162288654d7e5b2bfb18101e4454f7249",
+      "sourceContentSha256": "d1821708ef9072778469b4971320f3c385ca521299dbca4bdcebf0cb582f48e6",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 13,
+      "sourceId": "vic.skin.block-body",
+      "sourceName": "[模块]区块·正文（皮肤）",
+      "sourceEntrySha256": "b5b00c92c1ac338871ad58a718a40009dedd753bc87be32095bd26774b034714",
+      "sourceContentSha256": "6ace0488d64520650036f21158144e28f3949b9148a66aca392010f8d4e297c5",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 14,
+      "sourceId": "vic.skin.block-copy",
+      "sourceName": "[模块]区块·复制（皮肤）",
+      "sourceEntrySha256": "1ee3a950ad89cdd7cd90907c7160baa27ed6c8da961385534455e189c1dedd9b",
+      "sourceContentSha256": "24f1e6a63958b3cb6b0bdb242f045445bd7397ca6d448ed03c950b132aa87043",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 15,
+      "sourceId": "vic.skin.block-ext",
+      "sourceName": "[模块]区块·扩展（皮肤）",
+      "sourceEntrySha256": "a2f80c0c2cb1b2c74fb8b33fe442236bd672aeb25b7200928f284cf54a129ea1",
+      "sourceContentSha256": "c01d8b6e48c5145577ac6edfe6e4fa12a4f6fab3e1e42d560b2de8832fa252b4",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 16,
+      "sourceId": "vic.skin.block-act",
+      "sourceName": "[模块]区块·选择栏（皮肤）",
+      "sourceEntrySha256": "5666468521230b7193483d8a67f51949423e5ee082ad848b362f10955680275e",
+      "sourceContentSha256": "df81205165b2e448188bb05b1bda2c69b90e8c065a55b88efbc138cf80cbe8f4",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·引擎·皮肤",
+      "sourceIndex": 17,
+      "sourceId": "vic.skin.block-todo",
+      "sourceName": "[模块]区块·待办（皮肤）",
+      "sourceEntrySha256": "b1ecb182aa6b65f91d40fd33f1330b888742d9ac6f2c2b4ffacdaa3543f5ab62",
+      "sourceContentSha256": "3875817a82a4e74ba52d91d26d7d593a00600d6c54fc99c218aaf1a6aeb1972c",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.skin.protocol-markers"
+      ],
+      "reason": "样式迁入 style-only Skin 模块。",
+      "continuityEvidence": [
+        "verify-system-runtime.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·叙事书",
+      "sourceIndex": 1,
+      "sourceId": "[协议]NA叙事思维链",
+      "sourceName": "[协议]NA叙事思维链",
+      "sourceEntrySha256": "9c2a737b9e2a39cc926d74a25f8eba3c2b1927c51f6a8cca493073276a8f35d0",
+      "sourceContentSha256": "9fceff302b11fcd857d1ba846f18524ecba881adb346bbbc84963db21162645b",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧整段注入/散键契约改为 25 个禁用源块、单 frame 与固定六槽。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·叙事书",
+      "sourceIndex": 2,
+      "sourceId": "[契约]快照数据键",
+      "sourceName": "[契约]快照数据键",
+      "sourceEntrySha256": "c62541c891c17e9f7968626005999edddadd74c7127f8f57fa7cbc5800247330",
+      "sourceContentSha256": "8506b659631900a482a27857f17a194f678f6265175cf581835bfbf8924884f7",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧整段注入/散键契约改为 25 个禁用源块、单 frame 与固定六槽。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Vic·叙事书",
+      "sourceIndex": 3,
+      "sourceId": "[说明]ext画风源头注册格式（世界作者文档·永不注入）",
+      "sourceName": "[说明]ext画风源头注册格式（世界作者文档·永不注入）",
+      "sourceEntrySha256": "216cbfcf16da7579cc5f0f09b5ebcbdd1282816d037a61dae3578a52286df1fa",
+      "sourceContentSha256": "c657cbca864a1c3b1c186374f4d591e7588648ace4e66cf941d818d58bfbcbd1",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧整段注入/散键契约改为 25 个禁用源块、单 frame 与固定六槽。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 1,
+      "sourceId": "969cf211-83cc-4ce1-88ca-7ed9e270463a",
+      "sourceName": "用户顶部",
+      "sourceEntrySha256": "594c09b7a1180339b9711810593dacc2fcd32faa676c69022bdb18e1a6f6890f",
+      "sourceContentSha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "legacyDisposition": "retired-inert",
+      "asterStatus": "retired-verified",
+      "targets": [],
+      "reason": "r117 原条目内容为空，无运行行为。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "retirement-policy-test"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 2,
+      "sourceId": "nsfw",
+      "sourceName": "基础越狱",
+      "sourceEntrySha256": "905c2ab6482fe30d186b8d77a9547129bccae54d4ecefde25a2de7ef2d23e197",
+      "sourceContentSha256": "19fbff37b474cabbbe9b652a3411f5ccda8b7a74c23ad481bf48d6a985949f6c",
+      "legacyDisposition": "retired-explicit",
+      "asterStatus": "retired-verified",
+      "targets": [],
+      "reason": "用户已允许移除破限/越狱内容；v2 安全边界禁止恢复。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "retirement-policy-test"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 3,
+      "sourceId": "main",
+      "sourceName": "系统提示词",
+      "sourceEntrySha256": "246079d9fbc65328d62f2d18399b488d1c716396a15739ecdd39090399427139",
+      "sourceContentSha256": "3388de9c7f3a2a97bddf9de49dc37c75de6f2b423dadee64f468b94aba8eac03",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧多提示/散快照改为 disabled chunks + 单 EJS 路由 + 单 NarrativeFrame。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 4,
+      "sourceId": "viProtocol",
+      "sourceName": "Vic·叙事协议（完整 CoT·快照字段原位内联·空态诊断）",
+      "sourceEntrySha256": "f8331165bcf0355607398db2ff8fb9aeffd4e176f4ec84297d49abc908ac2a5b",
+      "sourceContentSha256": "0c23543cc811f55fd46f61bd2295fafeec899ab5646302fbf806e40d239549ae",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧多提示/散快照改为 disabled chunks + 单 EJS 路由 + 单 NarrativeFrame。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 5,
+      "sourceId": "viInit",
+      "sourceName": "Vic·开局向导（一次性·初始化闭合即消失）",
+      "sourceEntrySha256": "4d8dd2991c6f4be7037f6a6c6438d8316b50786fb2ccf7d515cb68806e56dd5f",
+      "sourceContentSha256": "35366fa98e77f944d246375fb93d79f38ff0a4caf3f4201c9e5ec15183a64f67",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧多提示/散快照改为 disabled chunks + 单 EJS 路由 + 单 NarrativeFrame。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 6,
+      "sourceId": "viTmpInject",
+      "sourceName": "Vic·生成协议注入器（引擎 spInject 成品透出）",
+      "sourceEntrySha256": "ec8b158ddb4345e267396d12b129e82b764fd07d9642bcd6c5d242243e379a0d",
+      "sourceContentSha256": "6b5de5f02dbd4de61d543d3c70b34b599ca4b9b57e83a315502efa6461efdb72",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧多提示/散快照改为 disabled chunks + 单 EJS 路由 + 单 NarrativeFrame。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 7,
+      "sourceId": "viExNarr",
+      "sourceName": "Vic·格式示例·叙事轮（六段全区块占位符模板骨架——逐字同构·EJS 叙事模式自注）",
+      "sourceEntrySha256": "7d18c205fffd2bd277c6a7ad62027caa66c587d24b4a502798ec8194879d8f34",
+      "sourceContentSha256": "758e22d04d3cb752d7860e907f319185a7eb97b9ad148f14bf4e89fb1d1bf800",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧多提示/散快照改为 disabled chunks + 单 EJS 路由 + 单 NarrativeFrame。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 8,
+      "sourceId": "viExDev",
+      "sourceName": "Vic·格式示例·世界开发轮（调度行+单 copy 盒完整正确示范·EJS 世界开发/混合模式自注）",
+      "sourceEntrySha256": "bcd4b255ba6eea5d7f40c02ceb4b62fd2739b59c397fc1d37775dc302fb29bd1",
+      "sourceContentSha256": "0b541558845ef2d93d5ff56b1bcf875e53712cfd47ccc05ca12fdbb8eaf73297",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧多提示/散快照改为 disabled chunks + 单 EJS 路由 + 单 NarrativeFrame。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 9,
+      "sourceId": "0aa605bd-14e1-4465-b100-1953375c1614",
+      "sourceName": "分界线",
+      "sourceEntrySha256": "80b72d3cba89c4576f6ba9b1daa0c38ccc51f7d078e328221e98d8e722b0b003",
+      "sourceContentSha256": "6887f2f8ae8879851a539074cba80ea5c91dd27d6271c37248efe6ae12775e4c",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "静态分界线由单路由的块边界替代。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 10,
+      "sourceId": "personaDescription",
+      "sourceName": "Persona Description",
+      "sourceEntrySha256": "c75890c340a894a4fddb8a813f534715fb92e068e869000395aa66a547f8b313",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 11,
+      "sourceId": "scenario",
+      "sourceName": "Scenario",
+      "sourceEntrySha256": "6a94b1836827c45ec0f0a803ad030e9445432865d9c7a2ff1e91e487ecac647b",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 12,
+      "sourceId": "charPersonality",
+      "sourceName": "Char Personality",
+      "sourceEntrySha256": "62f762e523445ad686d96f418929aea40048627650f9f732cbbfcae155d3c159",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 13,
+      "sourceId": "charDescription",
+      "sourceName": "Char Description",
+      "sourceEntrySha256": "c6ec256f7839d6bd1c2825b71f8484c7600b1fc1c12a4763ac115d45a4d74078",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 14,
+      "sourceId": "worldInfoBefore",
+      "sourceName": "World Info (before)",
+      "sourceEntrySha256": "a6d6f43dad07defe5d7c36aac3ae3c1bfe68f78f91c7b5ed1d8e5f386f598fb5",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 15,
+      "sourceId": "worldInfoAfter",
+      "sourceName": "World Info (after)",
+      "sourceEntrySha256": "4f68a18543d93e56589cb7d6df08080dea3e562434b654a0e8b8229cece6a927",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 16,
+      "sourceId": "dialogueExamples",
+      "sourceName": "Chat Examples",
+      "sourceEntrySha256": "8b50e9d193ea4f78de5dd830b7d70ff1c1bdc98ede084221e6775b552ffb8a0f",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 17,
+      "sourceId": "chatHistory",
+      "sourceName": "Chat History",
+      "sourceEntrySha256": "471917cf5dd5a9096ec415c0b19f94910270ca2f7af74925615bdfc2d91742b3",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "translated",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge"
+      ],
+      "reason": "保留为宿主 marker，并进入 prompt_order；不计入 EJS 路由数量。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 18,
+      "sourceId": "jailbreak",
+      "sourceName": "Post-History Instructions",
+      "sourceEntrySha256": "b9e7a744278aa352fa537387da10686a04d8903ee23968ddffb14a894e5ffbf4",
+      "sourceContentSha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "legacyDisposition": "retired-explicit",
+      "asterStatus": "retired-verified",
+      "targets": [],
+      "reason": "用户已允许移除破限/越狱内容；v2 安全边界禁止恢复。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "retirement-policy-test"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 19,
+      "sourceId": "enhanceDefinitions",
+      "sourceName": "Enhance Definitions",
+      "sourceEntrySha256": "297fc7159a6e37e86a867ed748dbb115e828e30e247271b074f7f951beb14743",
+      "sourceContentSha256": "7025a725f05877bdee7b260fbccdfe242aebb5d418847b8ab51ca6c4817f167e",
+      "legacyDisposition": "superseded-policy",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.repository.narrative-snapshot",
+        "aster.function.generation"
+      ],
+      "reason": "改由有 provenance 的图鉴与有限视角策略提供人物信息，禁止模型凭空补设定。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 20,
+      "sourceId": "e8944034-9473-4964-bf67-df4efc4ed969",
+      "sourceName": "Claude越狱",
+      "sourceEntrySha256": "e71b6b00bc8688ab64b347bf7dd1737da55a5372dc33a475510e04bbcf82f933",
+      "sourceContentSha256": "acc28d80e3fa86b725518c5137a6e45aea950599b0b20980d5f38c1963ba91b1",
+      "legacyDisposition": "retired-explicit",
+      "asterStatus": "retired-verified",
+      "targets": [],
+      "reason": "用户已允许移除破限/越狱内容；v2 安全边界禁止恢复。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "retirement-policy-test"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 21,
+      "sourceId": "cf57a2f1-384f-4c97-a244-786acbc24b3b",
+      "sourceName": "Gpt越狱 ",
+      "sourceEntrySha256": "a2304f5786cfcc8eb679b9771070dae151dd4784bf6e512f9eccf50bc70d64a0",
+      "sourceContentSha256": "df7f2d5726d299eecb110f88109d4e0e3f3aa2ac1cef7d0dbc6181f6d9050f87",
+      "legacyDisposition": "retired-explicit",
+      "asterStatus": "retired-verified",
+      "targets": [],
+      "reason": "用户已允许移除破限/越狱内容；v2 安全边界禁止恢复。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "retirement-policy-test"
+      ]
+    },
+    {
+      "sourceBook": "Tavo_Vi_预设·叙事协议",
+      "sourceIndex": 22,
+      "sourceId": "viExCode",
+      "sourceName": "Vic·格式示例·代码开发轮（需求拆解→模块清单→模块 copy 盒·EJS 代码开发档自注）",
+      "sourceEntrySha256": "01a663de44e666a705555347d1beb577ea8e7b9b71b0eb7849eeefa9f40d8889",
+      "sourceContentSha256": "5ed2715fca0fc9a62f4e55f446a127defa6f089d99392d0ff981c7228098143e",
+      "legacyDisposition": "superseded-contract",
+      "asterStatus": "blueprint-mapped",
+      "targets": [
+        "aster.system.prompt-bridge",
+        "aster.function.narrative-frame",
+        "aster.function.protocol-parser"
+      ],
+      "reason": "旧多提示/散快照改为 disabled chunks + 单 EJS 路由 + 单 NarrativeFrame。",
+      "continuityEvidence": [
+        "verify-protocol-golden.js",
+        "verify-preset-ejs-chunks.js",
+        "verify-r117-seven-book-migration.js"
+      ],
+      "requiredAsterEvidence": [
+        "target-module-implementation",
+        "dependency-contract",
+        "behavior-probe",
+        "migration-readback"
+      ]
+    }
+  ]
+}

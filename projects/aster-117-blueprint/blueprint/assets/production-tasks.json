@@ -1,0 +1,109 @@
+{
+  "schema": "aster.common-ui-asset-production/v2",
+  "scope": "cross-world reusable UI only",
+  "excluded": [
+    "character portraits and avatars",
+    "specific locations and map content",
+    "gameplay scene art",
+    "live-room and post covers",
+    "item illustrations and event CG",
+    "any baked text, numbers, logos or HUD"
+  ],
+  "targetEvidence": {
+    "hostWidthCssPx": 394,
+    "phoneFrameCssPx": { "width": 297.23, "height": 589.54 },
+    "phoneContentCssPx": { "width": 295, "height": 467 },
+    "highDprReference": 3.25,
+    "evidence": "../../assets/catalog.json"
+  },
+  "palette": {
+    "ink": "#02080d", "panel": "#06121b", "cyan": "#62e7ff",
+    "cyanSoft": "#dff9ff", "violet": "#b78cff", "green": "#8af0c6",
+    "amber": "#f4c76c", "red": "#ff7d93"
+  },
+  "tasks": [
+    {
+      "id": "UI01", "priority": "P0", "family": "semantic icon system", "format": "SVG",
+      "deliverables": ["sprites/icons.svg symbol sprite", "one short-named SVG under icons/{use}/ for every icon id"],
+      "geometry": { "viewBox": "0 0 24 24", "safeInset": 2, "strokeWidth": 1.5, "stroke": "currentColor", "fill": "none", "linecap": "round", "linejoin": "round" },
+      "iconIds": [
+        "back", "close", "search", "filter", "sort", "add", "more",
+        "dashboard", "map", "location", "bag", "quest", "following", "home", "pet", "equipment", "craft",
+        "message", "forum", "live", "notification",
+        "data", "resource", "theme", "settings", "lock", "unlock", "edit", "delete",
+        "character", "lorebook", "regex", "preset", "image", "audio", "video", "font", "text", "binary", "archive",
+        "info", "success", "warning", "error",
+        "codex", "sticker", "gallery", "voice", "music", "book", "marker", "developer",
+        "modules", "form", "diagnostics", "parameters", "catalog", "drawer", "calendar", "journal"
+      ],
+      "auditExpansion": "源码二审由44扩到60：补齐当前手机、世界仪表盘和开发者入口，并提前覆盖近期日历/日记生态",
+      "artDirectionZh": "同一套冷感科幻细线图标，几何结构清楚，24像素下可辨认，少量非对称切口呼应参考图；不要外框，外框由按钮遮罩提供",
+      "negativeZh": "emoji，Unicode字形，拟物高光，复杂插画，填满画布，固定青色，文字，圆角应用商店风格"
+    },
+    {
+      "id": "UI02", "priority": "P0", "family": "scalable control masks", "format": "SVG mask/clipPath",
+      "deliverables": ["sprites/masks.svg", "6 short-named individual SVGs under masks/"],
+      "shapeIds": ["chamfer-6", "chamfer-10", "double-notch", "hex-node", "tab-slant", "bracket-button"],
+      "referenceSizesCssPx": ["32x32", "48x48", "88x32", "160x44", "100%x76"],
+      "rules": ["路径使用 objectBoundingBox 或 preserveAspectRatio=none 以便伸缩", "切角在最小 32px 控件上仍至少保留 4px", "遮罩不含颜色、阴影、文字和状态"],
+      "artDirectionZh": "精密科幻终端控件轮廓，克制的六边形、单角切除、双缺口和支架形边缘，轮廓干净，适合 CSS mask 与 clip-path"
+    },
+    {
+      "id": "BG01", "priority": "P0", "family": "terminal-cyan wallpaper", "filename": "backgrounds/terminal.webp", "storedName": "bg-terminal.webp", "format": "WebP",
+      "width": 1440, "height": 3200, "colorSpace": "sRGB", "alpha": false,
+      "safeCrop": "中央 72% 不放强焦点；298x750 与 394x853 裁切均成立",
+      "promptZh": "抽象冷色未来终端背景，黑蓝纵深，极淡青色电路网与远处数据雾，少量紫色反光，细节集中在边缘，中部留出应用图标和文字负空间，无人物无建筑无文字无HUD",
+      "negativeZh": "具体城市地标，角色，飞船，logo，文字，按钮，面板，强烈霓虹，满屏高频细节"
+    },
+    {
+      "id": "BG02", "priority": "P0", "family": "violet crystal wallpaper", "filename": "backgrounds/violet.webp", "storedName": "bg-violet.webp", "format": "WebP",
+      "width": 1440, "height": 3200, "colorSpace": "sRGB", "alpha": false,
+      "safeCrop": "中央 72% 保持低对比",
+      "promptZh": "抽象紫晶折射与黑蓝玻璃层叠，暗色占主导，细薄紫色和青色边缘光，纵向深景，中部克制留白，可作为通用科幻手机壁纸，无人物无地点无文字无HUD",
+      "negativeZh": "单个巨大宝石主体，角色，地点，logo，文字，按钮，过曝紫色，花哨万花筒"
+    },
+    {
+      "id": "BG03", "priority": "P0", "family": "green atrium wallpaper", "filename": "backgrounds/atrium.webp", "storedName": "bg-atrium.webp", "format": "WebP",
+      "width": 1440, "height": 3200, "colorSpace": "sRGB", "alpha": false,
+      "safeCrop": "中央 72% 保持低对比",
+      "promptZh": "抽象生物科技中庭质感，黑绿与深蓝基底，极淡有机曲线和数据脉络，青绿色柔光，少量紫色平衡，纵向深景，中部留白，通用科幻壁纸，无人物无具体建筑无文字无HUD",
+      "negativeZh": "森林照片，具体温室建筑，角色，logo，文字，按钮，高饱和荧光绿"
+    },
+    {
+      "id": "TX01", "priority": "P0", "family": "seamless surface textures", "format": "SVG + transparent PNG",
+      "deliverables": [
+        { "filename": "textures/noise.svg", "storedName": "tex-noise.svg", "size": "256x256 viewBox", "alpha": true, "usageOpacity": "0.025-0.07" },
+        { "filename": "textures/grid.svg", "storedName": "tex-grid.svg", "size": "256x256", "alpha": true, "usageOpacity": "0.03-0.09" },
+        { "filename": "textures/circuit.svg", "storedName": "tex-circuit.svg", "size": "512x512", "alpha": true, "usageOpacity": "0.025-0.08" },
+        { "filename": "textures/scan.svg", "storedName": "tex-scan.svg", "size": "64x64", "alpha": true, "usageOpacity": "0.02-0.06" }
+      ],
+      "rules": ["四边完全无缝", "没有中心构图", "只输出单色 alpha 信息，颜色交给 CSS", "100% 缩放不得出现接缝"]
+    },
+    {
+      "id": "UI03", "priority": "P1", "family": "terminal decoration atlas", "format": "SVG symbol sprite",
+      "deliverables": ["sprites/decor.svg"],
+      "symbolIds": ["corner-bracket", "corner-cut", "divider-data", "divider-ticks", "node-ring", "node-diamond", "focus-reticle", "status-bars"],
+      "rules": ["只画一份左上角，允许 CSS 镜像", "无固定颜色", "线宽与 UI01 一致", "不得包含功能含义或文字"]
+    },
+    {
+      "id": "AN01", "priority": "P1", "family": "pulse ring sprite", "filename": "effects/pulse.png", "storedName": "fx-pulse.png", "format": "transparent PNG spritesheet",
+      "frame": { "width": 128, "height": 128, "count": 8, "layout": "8x1", "sheetWidth": 1024, "sheetHeight": 128, "durationMs": 900, "timing": "steps(8)", "loop": true },
+      "fallback": "frame 3 as effects/pulse-still.png",
+      "artDirectionZh": "一个细线六边脉冲环从中心扩张并淡出，透明背景，白色alpha母版供CSS着色，首尾可循环"
+    },
+    {
+      "id": "AN02", "priority": "P1", "family": "ambient particles", "filename": "effects/particles.webp", "storedName": "fx-particles.webp", "format": "transparent animated WebP",
+      "frame": { "width": 512, "height": 512, "fps": 12, "durationMs": 4000, "loop": true },
+      "fallback": "effects/particles-still.png",
+      "artDirectionZh": "极稀疏的细小数据尘与短线缓慢漂移，透明背景，粒子只用白色alpha，运动克制，首尾无跳变",
+      "negativeZh": "雪花，烟花，星空，密集雨幕，大光斑，固定黑底，彩色烘焙"
+    },
+    {
+      "id": "AN03", "priority": "P1", "family": "glitch scan overlay", "filename": "effects/glitch.webp", "storedName": "fx-glitch.webp", "format": "transparent animated WebP",
+      "frame": { "width": 512, "height": 256, "fps": 10, "durationMs": 1600, "loop": true },
+      "fallback": "effects/glitch-still.png",
+      "artDirectionZh": "少量水平数据切片和断续扫描噪声掠过透明画布，主要集中在两三条窄带，白色alpha母版，首尾连续",
+      "negativeZh": "全屏电视雪花，RGB颜色偏移烘焙，文字乱码，黑色底图，高频闪烁"
+    }
+  ]
+}

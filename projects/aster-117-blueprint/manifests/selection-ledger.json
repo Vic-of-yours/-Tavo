@@ -1,0 +1,77 @@
+{
+  "schema": "aster.selection-ledger/v1",
+  "release": "117-to-aster-blueprint-r002",
+  "ironRule": "Every file in the cleaned current tree enters exactly one of the latest code/assets packages. Exact duplicate content fails the build. Excluded source files require an explicit row in manifests/full-file-disposition.json; a source hash is traceability evidence but is not recoverable Git history.",
+  "fullDisposition": "manifests/full-file-disposition.json",
+  "gitHistoryCoverage": "Git covers only files actually committed to the r002 branch. The four original attachment byte streams are not claimed recoverable from Git unless separately archived.",
+  "auditedDuplicateEvidence": {
+    "Projects.zip": {
+      "expandedFiles": 2381,
+      "duplicateGroups": 32,
+      "redundantCopies": 61,
+      "redundantBytes": 20254991,
+      "logicalDuplicates": [
+        "Aster-mobile-shell-source-0.9.0.zip repeats 233/233 current-tree members",
+        "Aster-mobile-shell-0.9.0.zip repeats 23/23 expanded delivery members"
+      ]
+    },
+    "vi-project-dev-v2-v117.zip": {
+      "leafFiles": 256,
+      "uniqueLeafContent": 248,
+      "duplicateGroups": 8,
+      "redundantCopies": 8,
+      "redundantBytes": 72859
+    },
+    "绮楼在改小手机-1.4.1.tpg": {
+      "entries": 20,
+      "exactDuplicateFiles": 0,
+      "semanticRefactorEvidence": "456 normalized cross-file repeated lines; moments/twitter similarity 0.6635"
+    },
+    "Tavo_兽人牧场_1kYBH.json": {
+      "entries": 8,
+      "exactDuplicateEntries": 0,
+      "constantContentCharacters": 165640,
+      "constantContentRatio": 0.93
+    }
+  },
+  "retiredFromLiveTree": [
+    "all Aster 0.1-0.8 releases and delta outputs",
+    "all out/ and expanded delivery artifacts",
+    "vendored Python site-packages and Termux-specific wrappers",
+    "v117 history/, nested archives and importer 1.0.4",
+    "legacy build_bundle.py",
+    "reference TPG code, unverified network providers and its cover image",
+    "standalone UI screenshots and mockups",
+    "stale per-session reports with absolute scratch paths"
+  ],
+  "portraitRasterRemovals": [
+    {
+      "name": "aster-player-standing.png",
+      "bytes": 2155007,
+      "sha256": "a72941408796bcb996a5e22bfbf6265b4c7d4fbf19a8c1fc0f683dba0e83632d"
+    },
+    {
+      "name": "aster-orbit-player-open.webp",
+      "bytes": 113348,
+      "sha256": "09a269f63ad0473842e87e8d16d56ea13d2160246003e3614a57325039e2d663"
+    },
+    {
+      "name": "aster-player-open-v2-source.png",
+      "bytes": 2269081,
+      "sha256": "363d0f0c8aeea1a4edccbed3ebb47adba27a0912bd5a84a7ccb03744779a6680"
+    },
+    {
+      "name": "绮楼在改小手机 cover.jpg (actual PNG)",
+      "bytes": 68665,
+      "sha256": "1650b54cc83e66a1d64d5f090e2751d037fa7338ec31a371ed191ca34d5f219e"
+    }
+  ],
+  "keptAssetClasses": [
+    "semantic SVG icons",
+    "SVG masks and textures",
+    "abstract wallpapers and motion layers",
+    "world sphere, map and isometric home backgrounds",
+    "non-portrait social scene backgrounds"
+  ],
+  "runtimeCharacterPolicy": "player.avatar, player.standing and social.portrait remain semantic slots with empty defaults; only an explicit world Mod or user-owned resource may populate them"
+}

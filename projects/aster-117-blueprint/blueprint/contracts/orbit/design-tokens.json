@@ -1,0 +1,57 @@
+{
+  "schema": "aster.holo-veil.tokens/v1.1",
+  "color": {
+    "void": "#02070d",
+    "glass": "#06131d",
+    "text": "#e8f6ff",
+    "muted": "#8ea6b5",
+    "cyan": "#54e8ff",
+    "violet": "#ad78ff",
+    "mint": "#69f2bd",
+    "warning": "#e8c56b"
+  },
+  "opacity": {
+    "root": 0.85,
+    "surface": 0.42,
+    "surfaceQuiet": 0.26,
+    "hairline": 0.28,
+    "focus": 0.72,
+    "characterFadeFloor": 0
+  },
+  "typographyPx": {
+    "display": 30,
+    "title": 22,
+    "body": 13,
+    "meta": 11,
+    "monoTrackingEm": 0.14
+  },
+  "interaction": {
+    "minimumTargetPx": 44,
+    "dragDeadZonePx": 8,
+    "snapDurationMs": 180,
+    "inertiaFriction": 0.92,
+    "reducedMotionSnapDurationMs": 0,
+    "suppressClickAfterDrag": true
+  },
+  "orbit": {
+    "ringCount": 2,
+    "visibleFullItems": 3,
+    "peekFraction": 0.38,
+    "lockWhenCountAtMost": 3,
+    "overscanItems": 1,
+    "innerDefaultCount": 5,
+    "outerDefaultCount": 4,
+    "focusIdentity": "activeId",
+    "indexBehavior": "derived",
+    "restoreFallback": "nearest-valid-index"
+  },
+  "social": {
+    "builtInPresentations": ["messages", "forum", "live"],
+    "customPresentationFallback": "generic",
+    "independentEntryFields": ["unread", "followed", "online", "kind", "status"]
+  },
+  "breakpointsPx": {
+    "compact": 520,
+    "wide": 900
+  }
+}

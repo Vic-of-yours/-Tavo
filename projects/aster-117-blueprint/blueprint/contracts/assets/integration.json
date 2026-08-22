@@ -1,0 +1,61 @@
+{
+  "schema": "aster.common-ui-integration/v2",
+  "authority": {
+    "pluginChanges": false,
+    "worldbookChanges": true,
+    "cssOwner": "Aster·皮肤",
+    "semanticMarkupOwner": "Aster·系统",
+    "resourceIndexOwner": "Aster·功能 / Aster·资源书"
+  },
+  "integration": [
+    {
+      "task": "UI01",
+      "target": "replace mixed Unicode symbols and duplicated inline paths with one semantic SVG symbol sprite",
+      "worldbook": "Aster·系统",
+      "skin": "size, stroke color, hover/focus/disabled state only",
+      "notes": "图标名是语义数据；颜色和状态不烘焙进 SVG"
+    },
+    {
+      "task": "UI02",
+      "target": "CSS mask/clip-path variables for buttons, tiles, tabs and map nodes",
+      "worldbook": "Aster·皮肤",
+      "skin": "register --aster-mask-* variables and class recipes",
+      "notes": "保留真实 button 元素、点击热区、文字与 aria"
+    },
+    {
+      "task": "BG01-BG03",
+      "target": "existing phone.wallpaper values terminal-city / violet-crystal / green-atrium",
+      "worldbook": "Aster·皮肤",
+      "skin": "map existing values to local resources; retain CSS gradient fallback",
+      "notes": "不新增世界内容槽"
+    },
+    {
+      "task": "TX01/UI03",
+      "target": "shared surface texture and decoration variables",
+      "worldbook": "Aster·皮肤",
+      "skin": "--aster-ui-noise, --aster-ui-grid, --aster-ui-circuit, --aster-ui-scanline, symbol decoration classes",
+      "notes": "纹理只做 alpha 母版，主题色由 token 提供"
+    },
+    {
+      "task": "AN01-AN03",
+      "target": "optional shared motion overlays",
+      "worldbook": "Aster·皮肤",
+      "skin": "pseudo-elements and background-position/animated image recipes",
+      "notes": "必须在 prefers-reduced-motion 下禁用并换静态 fallback"
+    }
+  ],
+  "packaging": {
+    "format": "aster.blueprint-asset-package/v1",
+    "installable": false,
+    "scope": "global",
+    "targetDirectory": "assets/{icons,masks,sprites,textures,effects,backgrounds,scenes,maps}/",
+    "rules": [
+      "资源先入包并计算实际 SHA-256，再由世界书语义键引用",
+      "不使用网络 URL 作为最终依赖",
+      "不修改 runtime 或 importer 插件",
+      "CSS 仅写入 Skin 模块；System 只保留语义结构和图标 ID",
+      "人物与头像槽保持为空；世界 Mod 内容资产另包管理",
+      "本蓝图素材 ZIP 是可审计源包，不宣称为可直接安装的 aster.mod/v1"
+    ]
+  }
+}
