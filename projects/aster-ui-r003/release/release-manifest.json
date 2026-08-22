@@ -1,0 +1,59 @@
+{
+  "schema": "aster.release-delivery/v1",
+  "version": "0.9.1",
+  "installBundle": "Aster-mobile-shell-0.9.1.zip",
+  "sourceBundle": "Aster-mobile-shell-source-0.9.1.zip",
+  "runtimePlugin": "aster-runtime-0.9.1.tpg",
+  "importerPlugin": "aster-mod-importer-1.4.0.tpg",
+  "resourcePackages": [
+    "Aster-common-ui-assets-1.0.0.zip",
+    "Aster-orbit-holo-assets-1.1.0.zip"
+  ],
+  "artifacts": [
+    {
+      "name": "Aster-mobile-shell-0.9.1.zip",
+      "bytes": 1837971,
+      "sha256": "678d004b291760ef9cc4fb98d19b223b40bd70fbf10871d8413a7498d0388323"
+    },
+    {
+      "name": "Aster-mobile-shell-source-0.9.1.zip",
+      "bytes": 28377518,
+      "sha256": "1196eb6c41b36f3383dfa745c7825316a63cfb3c036b6993ee7869898d56711a"
+    },
+    {
+      "name": "aster-runtime-0.9.1.tpg",
+      "bytes": 6954,
+      "sha256": "8bd4619f3348d20ca15ca14ab0aaab62d634de874e61ca62665c18dd77032bef"
+    },
+    {
+      "name": "aster-mod-importer-1.4.0.tpg",
+      "bytes": 24449,
+      "sha256": "72cf38916c13281338f6ff28a9623492ad5706f93f2c549654fc1b766739381b"
+    },
+    {
+      "name": "Aster-common-ui-assets-1.0.0.zip",
+      "bytes": 690163,
+      "sha256": "154389027e51d2bb1993577014eb3841f0ab9e82295f3f8d9a60143cab023f33"
+    },
+    {
+      "name": "Aster-common-ui-assets-1.0.0-SHA256.txt",
+      "bytes": 99,
+      "sha256": "2fd3f28fa459240c1b326d94d88ad66f1082aa445ad5bd2b66e8ff44e354713a"
+    },
+    {
+      "name": "Aster-orbit-holo-assets-1.1.0.zip",
+      "bytes": 892860,
+      "sha256": "589f26cf0db8068b2dd00b4df986e7e4364f5dd0abb43ecfad40aea767d877bd"
+    },
+    {
+      "name": "Aster-orbit-holo-assets-1.1.0-SHA256.txt",
+      "bytes": 100,
+      "sha256": "020ed3205b08fbffa95bdd597e84960a5dd0320ece91943a89da03dda125ee6e"
+    },
+    {
+      "name": "Aster-0.9.1-SHA256SUMS.txt",
+      "bytes": 581,
+      "sha256": "a7d6b634ddf6089d9080589b00d9e1ea7ceaea18e51613ac7347078acfe591c3"
+    }
+  ]
+}
