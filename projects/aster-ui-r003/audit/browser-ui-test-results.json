@@ -1,0 +1,7 @@
+{
+  "ok": null,
+  "skipped": true,
+  "realBrowser": false,
+  "hostDevice": false,
+  "reason": "Playwright Chromium executable is not installed"
+}
